@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> – <span class="en">Empowering Industries, Enriching Lives</span><span class="ar">نعزز الصناعات ونثري الحياة</span></title>
+<title>OQ Base Industries – Empowering Industries, Enriching Lives</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -45,107 +45,33 @@ ul{list-style:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}
 
 /* ===== NAVBAR ===== */
-/* ── NAVBAR ── */
-.navbar{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  display:flex;flex-direction:column;
-  background:transparent;
-  transition:background .35s,box-shadow .35s;
-}
-.navbar.scrolled{background:rgba(16,16,16,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-
-/* ── top strip ── */
-.navbar__top{
-  display:flex;align-items:center;justify-content:flex-end;
-  gap:0;
-  padding:0 clamp(16px,3.5vw,56px);
-  height:36px;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.navbar__top a{
-  color:rgba(255,255,255,.75);font-size:12.5px;font-weight:600;letter-spacing:.3px;
-  padding:0 16px;height:36px;display:flex;align-items:center;
-  transition:color .2s,background .2s;cursor:pointer;white-space:nowrap;
-  border-left:1px solid rgba(255,255,255,.08);
-}
-.navbar__top a:first-child{border-left:none}
-.navbar__top a:hover{color:#fff;background:rgba(255,255,255,.06)}
-
-/* ── bottom bar ── */
-.navbar__bottom{
-  display:flex;align-items:center;
-  padding:0 clamp(16px,3.5vw,56px);
-  height:54px;
-  gap:0;
-}
-.logo-mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--orange) 40%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-mark span{color:#fff;font-weight:800;font-size:13px;letter-spacing:-1px}
-.logo-text{color:var(--white);font-size:clamp(13px,1.4vw,16px);font-weight:700;letter-spacing:-.2px;line-height:1.2}
-.logo-text small{display:block;font-size:9.5px;font-weight:300;letter-spacing:.5px;opacity:.6}
-.navbar__logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;margin-right:clamp(24px,3vw,52px);text-decoration:none}
-
-/* primary links */
-.navbar__links{
-  display:flex;align-items:center;gap:0;margin-right:auto;height:54px;
-}
-.navbar__links a{
-  color:rgba(255,255,255,.75);font-size:14px;font-weight:400;
-  padding:0 clamp(10px,1.2vw,18px);height:54px;
-  display:flex;align-items:center;white-space:nowrap;
-  border-bottom:2px solid transparent;
-  transition:color .2s,border-color .2s;cursor:pointer;
-}
-.navbar__links a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.25)}
-.navbar__links a.active{color:var(--orange);border-bottom-color:var(--orange);font-weight:500}
-
-/* lang toggle */
-.navbar__lang{
-  color:rgba(255,255,255,.65);font-size:12.5px;cursor:pointer;font-weight:500;
-  border:1px solid rgba(255,255,255,.22);padding:5px 14px;border-radius:20px;
-  transition:all .2s;white-space:nowrap;margin-left:16px;letter-spacing:.2px;
-}
-.navbar__lang:hover{color:#fff;border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.06)}
-.navbar__lang span{pointer-events:none}
-
-/* hamburger — hidden by default */
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;margin-left:18px;width:28px;height:28px}
-.nav-burger span{width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
-.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-burger.open span:nth-child(2){opacity:0}
-.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-/* ── mobile drawer ── */
-.mobile-menu{
-  display:none;position:fixed;
-  top:90px;left:0;right:0;bottom:0;
-  background:rgba(14,14,14,.98);backdrop-filter:blur(20px);
-  z-index:998;flex-direction:column;overflow-y:auto;
-  transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
-}
-.mobile-menu.open{display:flex;transform:translateX(0)}
-/* section dividers inside mobile menu */
-.mobile-menu__section{
-  padding:6px 0 4px;border-bottom:1px solid rgba(255,255,255,.06);
-}
-.mobile-menu__label{
-  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  color:rgba(255,255,255,.3);padding:12px 28px 4px;
-}
-.mobile-menu a{
-  color:rgba(255,255,255,.8);font-size:16px;font-weight:400;
-  padding:14px 28px;display:flex;align-items:center;justify-content:space-between;
-  transition:color .15s,background .15s;cursor:pointer;
-}
-.mobile-menu a:after{content:'→';font-size:12px;opacity:.3}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--orange);background:rgba(255,130,0,.05)}
-.mobile-menu a.active:after{opacity:.6;color:var(--orange)}
-/* lang button in mobile menu */
-.mobile-menu__lang{
-  margin:20px 28px;padding:12px 20px;border:1px solid rgba(255,255,255,.15);
-  border-radius:12px;text-align:center;color:rgba(255,255,255,.7);
-  font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;
-}
-.mobile-menu__lang:hover{border-color:var(--teal);color:var(--teal)}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);display:flex;flex-direction:column;justify-content:space-between;padding:10px clamp(16px,3.5vw,56px) 10px;background:transparent;transition:background .35s,box-shadow .35s,backdrop-filter .35s}
+.navbar.scrolled{background:rgba(18,18,18,.96);backdrop-filter:blur(18px);box-shadow:0 2px 24px rgba(0,0,0,.35)}
+.navbar__logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;margin-right:40px}
+.logo-mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--orange) 40%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark span{color:#fff;font-weight:800;font-size:14px;letter-spacing:-1px}
+.logo-text{color:var(--white);font-size:clamp(13px,1.6vw,18px);font-weight:700;letter-spacing:-.3px;line-height:1.2}
+.logo-text small{display:block;font-size:10px;font-weight:300;letter-spacing:.5px;opacity:.7}
+/* Two-row nav: top row = secondary links; bottom row = primary links */
+.navbar__top{display:flex;align-items:center;justify-content:flex-end;gap:28px}
+.navbar__top a{color:var(--white);font-size:13.5px;font-weight:700;letter-spacing:.1px;opacity:.9;transition:color .2s;cursor:pointer;white-space:nowrap}
+.navbar__top a:hover,.navbar__top a.active-top{color:var(--teal)}
+.navbar__top-divider{width:1px;height:14px;background:rgba(255,255,255,.25);flex-shrink:0}
+.navbar__bottom{display:flex;align-items:center}
+.navbar__links{display:flex;gap:clamp(20px,2.2vw,40px);margin-right:auto}
+.navbar__links a{color:var(--white);font-size:clamp(13px,1.05vw,15px);font-weight:400;opacity:.82;transition:opacity .2s,color .2s;cursor:pointer;white-space:nowrap}
+.navbar__links a:hover{opacity:1;color:var(--teal)}
+.navbar__links a.active{color:var(--orange);opacity:1;font-weight:600}
+.navbar__lang{color:rgba(255,255,255,.7);font-size:13px;cursor:pointer;transition:color .2s;border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:20px;white-space:nowrap;margin-left:20px}
+.navbar__lang:hover{color:#fff;border-color:rgba(255,255,255,.65)}
+.navbar__search{width:28px;height:28px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);cursor:pointer;margin-left:12px;border:1.5px solid rgba(255,255,255,.35);border-radius:6px;font-size:13px;transition:color .2s,border-color .2s}
+.navbar__search:hover{color:#fff;border-color:rgba(255,255,255,.7)}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:16px}
+.nav-burger span{width:22px;height:2px;background:#fff;border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(20,20,20,.99);backdrop-filter:blur(14px);z-index:999;padding:10px 0;flex-direction:column}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--white);font-size:15px;font-weight:400;padding:13px clamp(20px,5vw,44px);border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;transition:color .2s}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--orange)}
 
 /* ===== BACK TO TOP ===== */
 .back-to-top{position:fixed;bottom:32px;right:32px;width:54px;height:54px;background:var(--orange);border-radius:var(--r-btn);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2000;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s,background .2s;pointer-events:none;box-shadow:0 8px 24px rgba(255,130,0,.45)}
@@ -446,8 +372,7 @@ textarea.form-input{resize:vertical;min-height:110px}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:900px){
-  .navbar__top{display:none}
-  .navbar__links,.navbar__lang{display:none}
+  .navbar__top,.navbar__links,.navbar__lang,.navbar__search{display:none}
   .nav-burger{display:flex}
   .vm-row{grid-template-columns:1fr}
   .vm-card{grid-template-columns:1fr}
@@ -505,13 +430,11 @@ textarea.form-input{resize:vertical;min-height:110px}
 /* RTL layout flip when Arabic */
 [data-lang="ar"]{direction:rtl;font-family:'IBM Plex Sans Arabic',var(--font),sans-serif}
 [data-lang="ar"] .navbar__top{flex-direction:row-reverse}
-[data-lang="ar"] .navbar__top a{border-left:none;border-right:1px solid rgba(255,255,255,.08)}
-[data-lang="ar"] .navbar__top a:first-child{border-right:none}
 [data-lang="ar"] .navbar__bottom{flex-direction:row-reverse}
-[data-lang="ar"] .navbar__logo{margin-right:0;margin-left:clamp(24px,3vw,52px)}
+[data-lang="ar"] .navbar__logo{margin-right:0;margin-left:40px}
 [data-lang="ar"] .navbar__links{margin-right:0;margin-left:auto;flex-direction:row-reverse}
-[data-lang="ar"] .navbar__links a{border-bottom:2px solid transparent}
-[data-lang="ar"] .navbar__lang{margin-left:0;margin-right:16px}
+[data-lang="ar"] .navbar__lang{margin-left:0;margin-right:20px}
+[data-lang="ar"] .navbar__search{margin-left:0;margin-right:12px}
 [data-lang="ar"] .navbar__lang.active-lang{color:#fff;border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
 [data-lang="ar"] .hero__content{align-items:flex-start}
 [data-lang="ar"] .hero__title,[data-lang="ar"] .section-heading,[data-lang="ar"] .stat-card__value{text-align:right}
@@ -541,7 +464,7 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="article-modal__date" id="aModalDate"></div>
     <div class="article-modal__body" id="aModalBody"></div>
     <a class="btn btn--orange" id="aModalLink" href="#" target="_blank" style="margin-top:28px;display:inline-block">
-      <span class="en"><span class="en">Read full article on oqbi.om →</span><span class="ar">← اقرأ المقال كاملاً على oqbi.om</span></span>
+      <span class="en">Read full article on oqbi.om →</span>
       <span class="ar">اقرأ المقال كاملاً على oqbi.om ←</span>
     </a>
   </div>
@@ -560,66 +483,46 @@ textarea.form-input{resize:vertical;min-height:110px}
 
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="navbar">
-
-  <!-- TOP STRIP: secondary links -->
+  <!-- TOP ROW: secondary links right-aligned -->
   <div class="navbar__top">
-    <a onclick="showPage('investors')"><span class="en">Investor Relations</span><span class="ar">علاقات المُستثمرين</span></a>
-    <a onclick="showPage('tawreed')"><span class="en">Tawreed</span><span class="ar">توريد</span></a>
-    <a href="mailto:sustainability@oqbi.om"><span class="en">Contact Us</span><span class="ar">تواصل معنا</span></a>
+    <a onclick="showPage('investors')" id="nav-top-investors"><span class="en">Investors</span><span class="ar">علاقات المستثمرين</span></a>
+    <div class="navbar__top-divider"></div>
+    <a onclick="showPage('tawreed')" id="nav-top-tawreed"><span class="en">Tawreed</span><span class="ar">توريد</span></a>
+    <div class="navbar__top-divider"></div>
+    <a href="/cdn-cgi/l/email-protection#fa898f898e9b93949b989396938e83ba958b9893d49597"><span class="en">Contact US</span><span class="ar">تواصل معنا</span></a>
   </div>
-
-  <!-- MAIN BAR: logo + primary links + lang -->
+  <!-- BOTTOM ROW: logo + primary links + lang + search -->
   <div class="navbar__bottom">
     <div class="navbar__logo" onclick="showPage('home')">
       <div class="logo-mark"><span>OQ</span></div>
-      <div class="logo-text"><span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span><small><span class="en">Empowering Industries, Enriching Lives</span><span class="ar">نعزز الصناعات ونثري الحياة</span></small></div>
+      <div class="logo-text">Base Industries<small><span class="en"></span><span class="ar"></span></small></div>
     </div>
-
-    <nav class="navbar__links">
+    <div class="navbar__links">
       <a onclick="showPage('home')" class="active" id="nav-home"><span class="en">Home</span><span class="ar">الرئيسية</span></a>
       <a onclick="showPage('who')" id="nav-who"><span class="en">Who We Are</span><span class="ar">من نحن</span></a>
       <a onclick="showPage('what')" id="nav-what"><span class="en">What We Do</span><span class="ar">أعمالنا</span></a>
-      <a onclick="showPage('careers')" id="nav-careers"><span class="en">Careers</span><span class="ar">كوادرنا</span></a>
+      <a onclick="showPage('careers')" id="nav-careers"><span class="en">Career</span><span class="ar">كوادرنا</span></a>
       <a onclick="showPage('sustainability')" id="nav-sustainability"><span class="en">Sustainability</span><span class="ar">الاستدامة</span></a>
-      <a onclick="showPage('news')" id="nav-news"><span class="en">News & Media</span><span class="ar">الأخبار</span></a>
-    </nav>
-
-    <span class="navbar__lang" id="langToggle" onclick="toggleLang()">
-      <span class="en">عربي</span><span class="ar">English</span>
-    </span>
-
-    <div class="nav-burger" id="navBurger" onclick="toggleMenu()">
+      <a onclick="showPage('news')" id="nav-news"><span class="en">Media</span><span class="ar">أخبارنا</span></a>
+    </div>
+    <span class="navbar__lang" id="langToggle" onclick="toggleLang()"><span class="en">عربي</span><span class="ar">English</span></span>
+    <div class="navbar__search" title="Search">&#9906;</div>
+    <div class="nav-burger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
   </div>
-
 </nav>
 
-<!-- Mobile Drawer -->
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-
-  <div class="mobile-menu__section">
-    <div class="mobile-menu__label"><span class="en">Navigation</span><span class="ar">الصفحات</span></div>
-    <a onclick="showPage('home');toggleMenu()" id="mob-home"><span class="en">Home</span><span class="ar">الرئيسية</span></a>
-    <a onclick="showPage('who');toggleMenu()" id="mob-who"><span class="en">Who We Are</span><span class="ar">من نحن</span></a>
-    <a onclick="showPage('what');toggleMenu()" id="mob-what"><span class="en">What We Do</span><span class="ar">أعمالنا</span></a>
-    <a onclick="showPage('careers');toggleMenu()" id="mob-careers"><span class="en">Careers</span><span class="ar">كوادرنا</span></a>
-    <a onclick="showPage('sustainability');toggleMenu()" id="mob-sustainability"><span class="en">Sustainability</span><span class="ar">الاستدامة</span></a>
-    <a onclick="showPage('news');toggleMenu()" id="mob-news"><span class="en">News & Media</span><span class="ar">أخبارنا</span></a>
-  </div>
-
-  <div class="mobile-menu__section">
-    <div class="mobile-menu__label"><span class="en">More</span><span class="ar">المزيد</span></div>
-    <a onclick="showPage('investors');toggleMenu()" id="mob-investors"><span class="en">Investor Relations</span><span class="ar">علاقات المُستثمرين</span></a>
-    <a onclick="showPage('tawreed');toggleMenu()" id="mob-tawreed"><span class="en">Tawreed</span><span class="ar">توريد</span></a>
-    <a href="mailto:sustainability@oqbi.om"><span class="en">Contact Us</span><span class="ar">تواصل معنا</span></a>
-  </div>
-
-  <div class="mobile-menu__lang" onclick="toggleLang();toggleMenu()">
-    <span class="en">🌐 Switch to Arabic — عربي</span>
-    <span class="ar">🌐 Switch to English — English</span>
-  </div>
-
+  <a onclick="showPage('home');toggleMenu()"><span class="en">Home</span><span class="ar">الرئيسية</span></a>
+  <a onclick="showPage('who');toggleMenu()"><span class="en">Who We Are</span><span class="ar">من نحن</span></a>
+  <a onclick="showPage('what');toggleMenu()"><span class="en">What We Do</span><span class="ar">أعمالنا</span></a>
+  <a onclick="showPage('careers');toggleMenu()"><span class="en">Careers</span><span class="ar">كوادرنا</span></a>
+  <a onclick="showPage('sustainability');toggleMenu()"><span class="en">Sustainability</span><span class="ar">الاستدامة</span></a>
+  <a onclick="showPage('investors');toggleMenu()"><span class="en">Investor Relations</span><span class="ar">علاقات المستثمرين</span></a>
+  <a onclick="showPage('news');toggleMenu()"><span class="en">News & Media</span><span class="ar">أخبارنا</span></a>
+  <a onclick="showPage('tawreed');toggleMenu()"><span class="en">Tawreed</span><span class="ar">توريد</span></a>
 </div>
 
 <!-- ===== PERSON MODAL ===== -->
@@ -645,13 +548,13 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__bg img-ph" style="height:100%;position:absolute;inset:0;font-size:18px;opacity:.5">HERO IMAGE</div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow"><span class="en"><span class="en">OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> · Salalah Free Zone, Oman</span><span class="ar">أوكيو للصناعات الأساسية · المنطقة الحرة بصلالة، عُمان</span></span><span class="ar">أوكيو للصناعات الأساسية · المنطقة الحرة، صلالة، عُمان</span></p>
-      <h1 class="hero__title"><span class="en"><span class="en">Explore OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span></span><span class="ar">تعرف على أوكيو للصناعات الأساسية</span><br>
-        <!-- <em><span class="en">Enriching Lives.</span><span class="ar">نثري الحياة.</span></em> -->
+      <p class="hero__eyebrow"><span class="en">OQ Base Industries · Salalah Free Zone, Oman</span><span class="ar">أوكيو للصناعات الأساسية · المنطقة الحرة، صلالة، عُمان</span></p>
+      <h1 class="hero__title"><span class="en">Explore OQ Base Industries<br>
+        <!-- <em>Enriching Lives.</em> -->
       </span><span class="ar">استكشف أوكيو للصناعات الأساسية<br>
         <!-- <em>ونثري الحياة.</em> -->
       </span></h1>
-      <p class="hero__subtitle"><span class="en">Oman's only integrated producer of methanol, ammonia, and LPG products — powering industries and communities worldwide.</span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال — نُشغّل الصناعات ونُثري المجتمعات حول العالم.</span></p>
+      <p class="hero__subtitle"><span class="en"><span class="en">Oman's only integrated producer of methanol, ammonia, and LPG products — powering industries and communities worldwide.</span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال — نُشغّل الصناعات ونُثري المجتمعات حول العالم.</span></span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال — نُشغّل الصناعات ونُثري المجتمعات حول العالم.</span></p>
       <div class="hero__btns">
         <button class="btn btn--orange" onclick="showPage('who')">Learn More</button>
         <button class="btn btn--outline-white" onclick="showPage('tawreed')">Partner with Us</button>
@@ -665,15 +568,15 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center" class="reveal">
         <div>
-          <p class="section-label"><span class="en">Own the journey</span><span class="ar">كن سيد مسيرتك</span></p>
+          <p class="section-label"><span class="en">Own the journey</span><span class="ar">كن جزءًا من المسيرة</span></p>
           <h2 class="section-heading"><span class="en">Innovation, plants and business model – energy</span><span class="ar">الابتكار والمصانع ونموذج الأعمال في قطاع الطاقة</span></h2>
-          <p class="section-sub" style="margin-bottom:24px"><span class="en"><span class="en">OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> is Oman's leading integrated chemical producer, strategically located in the Salalah Free Zone. Our advanced facilities transform Oman's natural gas into essential products for global industries.</span><span class="ar">أوكيو للصناعات الأساسية الشركة المتكاملة الرائدة في الكيماويات في عُمان، وتقع استراتيجيًا في المنطقة الحرة بصلالة. تحوّل مرافقنا المتقدمة الغاز الطبيعي العُماني إلى منتجات أساسية للصناعات العالمية.</span></span><span class="ar">أوكيو للصناعات الأساسية هي الشركة المتكاملة الرائدة في إنتاج المواد الكيميائية في عُمان، وتقع استراتيجيًا في المنطقة الحرة بصلالة. تحوّل مرافقنا المتقدمة الغاز الطبيعي العُماني إلى منتجات أساسية للصناعات العالمية.</span></p>
+          <p class="section-sub" style="margin-bottom:24px"><span class="en"><span class="en">OQ Base Industries is Oman's leading integrated chemical producer, strategically located in the Salalah Free Zone. Our advanced facilities transform Oman's natural gas into essential products for global industries.</span><span class="ar">أوكيو للصناعات الأساسية الشركة المتكاملة الرائدة في الكيماويات في عُمان، وتقع استراتيجيًا في المنطقة الحرة بصلالة. تحوّل مرافقنا المتقدمة الغاز الطبيعي العُماني إلى منتجات أساسية للصناعات العالمية.</span></span><span class="ar">أوكيو للصناعات الأساسية هي الشركة المتكاملة الرائدة في إنتاج المواد الكيميائية في عُمان، وتقع استراتيجيًا في المنطقة الحرة بصلالة. تحوّل مرافقنا المتقدمة الغاز الطبيعي العُماني إلى منتجات أساسية للصناعات العالمية.</span></p>
           <button class="btn btn--orange" onclick="showPage('who')"><span class="en">Learn More</span><span class="ar">اعرف المزيد</span></button>
         </div>
         <div>
-          <p class="section-label" style="margin-top:28px"><span class="en">Explore Our Products</span><span class="ar">تصفح منتجاتنا</span></p>
+          <p class="section-label" style="margin-top:28px"><span class="en">Explore Our Products</span><span class="ar">استكشف منتجاتنا</span></p>
           <h2 class="section-heading"><span class="en">Engineering, work environment and global use of our product</span><span class="ar">الهندسة وبيئة العمل والاستخدام العالمي لمنتجاتنا</span></h2>
-          <p class="section-sub" style="margin-bottom:24px"><span class="en">From methanol that supports clean energy to ammonia bolstering food security, and LPG powering homes worldwide, we deliver essential solutions at scale.</span><span class="ar">من الميثانول الداعم للطاقة النظيفة إلى الأمونيا التي تُعزز الأمن الغذائي، ومنتجات الغاز البترولي المُسال التي تُضيء المنازل حول العالم، نُقدم حلولاً أساسية بنطاق عالمي.</span></p>
+          <p class="section-sub" style="margin-bottom:24px"><span class="en"><span class="en">From methanol that supports clean energy to ammonia bolstering food security, and LPG powering homes worldwide, we deliver essential solutions at scale.</span><span class="ar">من الميثانول الداعم للطاقة النظيفة إلى الأمونيا التي تُعزز الأمن الغذائي، ومنتجات الغاز البترولي المُسال التي تُضيء المنازل حول العالم، نُقدم حلولاً أساسية بنطاق عالمي.</span></span><span class="ar">من الميثانول الداعم للطاقة النظيفة إلى الأمونيا التي تُعزز الأمن الغذائي، ومنتجات الغاز البترولي المُسال التي تُضيء المنازل حول العالم، نُقدم حلولاً أساسية بنطاق عالمي.</span></p>
           <button class="btn btn--outline" onclick="showPage('what')"><span class="en">Learn More</span><span class="ar">اعرف المزيد</span></button>
         </div>
       </div>
@@ -683,15 +586,15 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- At A Glance Stats -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span></span><span class="ar">أوكيو للصناعات الأساسية</span></p>
-      <h2 class="section-heading reveal"><span class="en">At A Glance</span><span class="ar">لمحة عن أوكيو</span></h2>
+      <p class="section-label reveal"><span class="en">OQ Base Industries</span><span class="ar">أوكيو للصناعات الأساسية</span></p>
+      <h2 class="section-heading reveal"><span class="en">At A Glance</span><span class="ar">لمحة سريعة</span></h2>
       <div class="stat-grid" style="margin-top:28px">
         <div class="stat-card reveal d1">
           <div class="stat-card__bg img-ph"></div>
           <div class="stat-card__content">
             <div><div class="stat-card__value">4.7M<div class="stat-card__unit"><span class="en">Hours</span><span class="ar">ساعة</span></div></div></div>
             <div>
-              <div class="stat-card__label"><span class="en">Hours Without LTI</span><span class="ar">ساعات دون إصابات</span></div>
+              <div class="stat-card__label"><span class="en">Without LTI</span><span class="ar">بدون إصابات مفقودة</span></div>
               <div class="stat-card__tag"><span class="en">as of H1 2024</span><span class="ar">حتى النصف الأول 2024</span></div>
             </div>
           </div>
@@ -701,7 +604,7 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div class="stat-card__content">
             <div><div class="stat-card__value">433<div class="stat-card__unit"><span class="en">Employees</span><span class="ar">موظف</span></div></div></div>
             <div>
-              <div class="stat-card__label"><span class="en">Dedicated professionals</span><span class="ar">متخصصون متميزون</span></div>
+              <div class="stat-card__label"><span class="en">Dedicated professionals</span><span class="ar">متخصص متفانٍ</span></div>
               <div class="stat-card__tag"><span class="en">as of Q4 2024</span><span class="ar">حتى الربع الرابع 2024</span></div>
             </div>
           </div>
@@ -711,7 +614,7 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div class="stat-card__content">
             <div><div class="stat-card__value">82.9<div class="stat-card__unit">%</div></div></div>
             <div>
-              <div class="stat-card__label"><span class="en">National Workforce</span><span class="ar">القوى الوطنية العاملة</span></div>
+              <div class="stat-card__label"><span class="en">National Workforce</span><span class="ar">كوادر وطنية</span></div>
               <div class="stat-card__tag"><span class="en">as of Q4 2024</span><span class="ar">حتى الربع الرابع 2024</span></div>
             </div>
           </div>
@@ -719,7 +622,7 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div class="stat-card reveal d4">
           <div class="stat-card__bg img-ph"></div>
           <div class="stat-card__content">
-            <div><div class="stat-card__value">1.1<div class="stat-card__unit"><span class="en">MMT / yr</span><span class="ar">مليون طن/سنة</span></div></div></div>
+            <div><div class="stat-card__value">1.1<div class="stat-card__unit">MMT / yr</div></div></div>
             <div>
               <div class="stat-card__label"><span class="en">Methanol Production</span><span class="ar">إنتاج الميثانول</span></div>
               <div class="stat-card__tag"><span class="en">Annual Capacity</span><span class="ar">الطاقة الإنتاجية السنوية</span></div>
@@ -756,7 +659,7 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div class="banner-card reveal">
         <div class="banner-card__bg img-ph"></div>
         <div class="banner-card__content">
-          <div class="banner-card__title"><span class="en">The Journey To The Future Of Chemicals Starts Here</span><span class="ar">من هنا تنطلق الرحلة نحو مستقبل الصناعات الأساسية</span></div>
+          <div class="banner-card__title">The Journey To The Future Of Chemicals Starts Here</div>
           <button class="btn btn--orange" onclick="showPage('what')">Learn More</button>
         </div>
       </div>
@@ -769,9 +672,9 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
         <div class="reveal-left">
           <p class="section-label">Our products are everywhere</p>
-          <h2 class="section-heading"><span class="en">Powering the World's Essential Industries</span><span class="ar">تزويد صناعات العالم الأساسية بالطاقة والقيمة</span></h2>
+          <h2 class="section-heading"><span class="en">Powering the World's Essential Industries</span><span class="ar">نُغذّي الصناعات الأساسية في العالم</span></h2>
           <p class="section-sub" style="margin-bottom:24px">OQBI supplies the world with essentials that power contemporary industries and sectors, every day. From manufacturing consumer products to exploring the exciting possibilities for alternative fuels, we enable lives and future prospects.</p>
-          <button class="btn btn--orange" onclick="showPage('what')"><span class="en">Discover Our Products</span><span class="ar">اكتشف منتجاتنا</span></button>
+          <button class="btn btn--orange" onclick="showPage('what')">Discover Our Products</button>
         </div>
         <div class="reveal-right" style="border-radius:var(--r-card);overflow:hidden;min-height:320px;background:var(--near-black)" class="img-ph">
           <div class="img-ph" style="height:320px;border-radius:var(--r-card)">PLANT IMAGE</div>
@@ -788,10 +691,10 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div class="img-ph" style="height:320px;border-radius:var(--r-card)">COMMUNITY IMAGE</div>
         </div>
         <div class="reveal-right dark-section">
-          <p class="section-label"><span class="en">Giving Back</span><span class="ar">العطاء للمجتمع</span></p>
-          <h2 class="section-heading"><span class="en"><span class="en"><span class="en">Giving Back</span><span class="ar">العطاء للمجتمع</span> to the Community</span><span class="ar">العطاء والمسؤولية المجتمعية</span></span><span class="ar">نُعيد العطاء للمجتمع</span></h2>
-          <p class="section-sub" style="margin-bottom:24px">At OQBI, we believe in sharing our success by expanding the value chain to the communities where we live and operate. <span class="en">Our commitment to</span><span class="ar">التزامنا من أجل</span> corporate responsibility is reflected in impactful initiatives that genuinely empower people, foster strong local partnerships, and enable sustainable development.</p>
-          <button class="btn btn--orange" onclick="showPage('sustainability')"><span class="en">Explore Our Initiatives</span><span class="ar">تصفح مبادراتنا</span></button>
+          <p class="section-label">Giving Back</p>
+          <h2 class="section-heading"><span class="en">Giving Back to the Community</span><span class="ar">نُعيد العطاء للمجتمع</span></h2>
+          <p class="section-sub" style="margin-bottom:24px">At OQBI, we believe in sharing our success by expanding the value chain to the communities where we live and operate. Our commitment to corporate responsibility is reflected in impactful initiatives that genuinely empower people, foster strong local partnerships, and enable sustainable development.</p>
+          <button class="btn btn--orange" onclick="showPage('sustainability')">Explore Our Initiatives</button>
         </div>
       </div>
     </div>
@@ -804,9 +707,9 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div class="banner-card__bg img-ph"></div>
         <div class="banner-card__content">
           <div class="banner-card__title">Enriching lives across the world</div>
-          <div class="banner-card__sub">Find out how OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> is leveraging Oman's integrated value chain to deliver top-quality solutions that touch millions of lives worldwide.</div>
+          <div class="banner-card__sub">Find out how OQ Base Industries is leveraging Oman's integrated value chain to deliver top-quality solutions that touch millions of lives worldwide.</div>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <button class="btn btn--orange" onclick="showPage('tawreed')"><span class="en">Get in Touch</span><span class="ar">تواصل معنا</span></button>
+            <button class="btn btn--orange" onclick="showPage('tawreed')">Get in Touch</button>
             <button class="btn btn--outline-white" onclick="showPage('tawreed')">Partner with Us</button>
           </div>
         </div>
@@ -819,8 +722,8 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:10px">
         <div>
-          <p class="section-label reveal"><span class="en">news & media</span><span class="ar">الأخبار والإعلام</span></p>
-          <h2 class="section-heading reveal"><span class="en">The Latest at OQBI</span><span class="ar">آخر أخبار أوكيو</span></h2>
+          <p class="section-label reveal">news & media</p>
+          <h2 class="section-heading reveal"><span class="en">The Latest at OQBI</span><span class="ar">آخر أخبار أوكيو للصناعات الأساسية</span></h2>
         </div>
         <button class="btn btn--outline reveal" onclick="showPage('news')"><span class="en">View All</span><span class="ar">عرض الكل</span></button>
       </div>
@@ -839,7 +742,7 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__content">
       <p class="hero__eyebrow"><span class="en">About Us</span><span class="ar">من نحن</span></p>
       <h1 class="hero__title"><span class="en">Who We Are</span><span class="ar">قصتنا</span></h1>
-      <p class="hero__subtitle"><span class="en">Oman's only integrated producer of methanol, ammonia, and LPG products, located in the Dhofar region.</span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال، في محافظة ظفار.</span></p>
+      <p class="hero__subtitle"><span class="en"><span class="en">Oman's only integrated producer of methanol, ammonia, and LPG products, located in the Dhofar region.</span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال، في محافظة ظفار.</span></span><span class="ar">الشركة المتكاملة الوحيدة في عُمان لإنتاج الميثانول والأمونيا ومنتجات الغاز البترولي المُسال، في محافظة ظفار.</span></p>
     </div>
   </section>
 
@@ -848,11 +751,11 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">Overview</span><span class="ar">نظرة عامة</span></p>
-          <h2 class="section-heading"><span class="en">Building on a rich heritage</span><span class="ar">بدأت مسيرة أوكيو للصناعات الأساسية منذ عام 2006</span></h2>
+          <p class="section-label">Overview</p>
+          <h2 class="section-heading"><span class="en">Building on a rich heritage</span><span class="ar">نبني على إرث عريق</span></h2>
           <p class="section-sub" style="margin-bottom:18px">Our agile and compact facility in the Salalah Free Zone is designed to be flexible and responsive, enabling us to quickly adapt to market demands and consistently meet the needs of our clients, both locally and globally.</p>
           <p class="section-sub" style="margin-bottom:18px">Equipped with advanced infrastructure and technical expertise, we deliver reliable, high-quality products for critical and innovative applications, from consumer product manufacturing to alternative fuel production.</p>
-          <p class="section-sub">We aspire to be a leading global chemicals company that enriches communities through exceptional operations and a dedicated team. <span class="en">Our commitment to</span><span class="ar">التزامنا من أجل</span> advancing Oman's natural resources is rooted in safety, environmental stewardship and continuous improvement.</p>
+          <p class="section-sub">We aspire to be a leading global chemicals company that enriches communities through exceptional operations and a dedicated team. Our commitment to advancing Oman's natural resources is rooted in safety, environmental stewardship and continuous improvement.</p>
         </div>
         <div class="reveal-right">
           <div class="img-ph" style="height:420px;border-radius:var(--r-card)">FACILITY IMAGE</div>
@@ -867,7 +770,7 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div class="vm-row reveal">
         <div class="vm-card vm-card--light">
           <div class="vm-card__body">
-            <h3 class="vm-card__title"><span class="en">Our Vision</span><span class="ar">رؤيتنا</span></h3>
+            <h3 class="vm-card__title">Our Vision</h3>
             <p class="vm-card__text">Championing a global reach and sustainable solutions by leveraging the skills and experience of exceptional talent.</p>
           </div>
           <div class="vm-card__img img-ph">VISION IMAGE</div>
@@ -875,7 +778,7 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div class="vm-card vm-card--dark">
           <div class="vm-card__img img-ph" style="background:#2a2a2a">MISSION IMAGE</div>
           <div class="vm-card__body">
-            <h3 class="vm-card__title"><span class="en">Our Mission</span><span class="ar">مهمتنا</span></h3>
+            <h3 class="vm-card__title">Our Mission</h3>
             <p class="vm-card__text">To drive sustainable growth and operational excellence by cultivating a people-focused culture through energy-efficient decarbonisation initiatives and domestic growth.</p>
           </div>
         </div>
@@ -883,30 +786,30 @@ textarea.form-input{resize:vertical;min-height:110px}
     </div>
   </section>
 
-  <!-- <span class="en">Our Values</span><span class="ar">قيمنا</span> -->
+  <!-- Our Values -->
   <section class="section">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Our Values</span><span class="ar">قيمنا</span></p>
-      <h2 class="section-heading reveal" style="margin-bottom:28px"><span class="en">What We Stand For</span><span class="ar">ما نؤمن به</span></h2>
+      <p class="section-label reveal">Our Values</p>
+      <h2 class="section-heading reveal" style="margin-bottom:28px"><span class="en">What We Stand For</span><span class="ar">قيمنا ومبادئنا</span></h2>
       <div class="values-strip reveal">
         <div class="value-item" onclick="toggleValue(this)">
           <div class="value-item__icon">🤝</div>
-          <div class="value-item__label"><strong><span class="en">Belong</span><span class="ar">الانتماء</span></strong><span class="en">We Belong</span><span class="ar">ننتمي</span></div>
+          <div class="value-item__label"><strong><span class="en">Belong</span><span class="ar">الانتماء</span></strong>We Belong</div>
           <div class="value-item__desc">We foster an inclusive culture where everyone feels a sense of belonging and works towards common goals.</div>
         </div>
         <div class="value-item" onclick="toggleValue(this)">
           <div class="value-item__icon">🎯</div>
-          <div class="value-item__label"><strong><span class="en">Perform</span><span class="ar">الأداء</span></strong><span class="en">We Perform</span><span class="ar">نؤدي</span></div>
+          <div class="value-item__label"><strong><span class="en">Perform</span><span class="ar">الأداء</span></strong>We Perform</div>
           <div class="value-item__desc">We are driven by excellence and dedicated to performing according to the highest standards, in everything we do.</div>
         </div>
         <div class="value-item" onclick="toggleValue(this)">
           <div class="value-item__icon">💡</div>
-          <div class="value-item__label"><strong><span class="en">Collaborate</span><span class="ar">التعاون</span></strong><span class="en">We Collaborate</span><span class="ar">نتعاون</span></div>
+          <div class="value-item__label"><strong><span class="en">Collaborate</span><span class="ar">التعاون</span></strong>We Collaborate</div>
           <div class="value-item__desc">We believe in the power of collaboration to achieve smarter, more innovative outcomes.</div>
         </div>
         <div class="value-item" onclick="toggleValue(this)">
           <div class="value-item__icon">🌱</div>
-          <div class="value-item__label"><strong><span class="en">Care</span><span class="ar">الاهتمام</span></strong><span class="en">We Care</span><span class="ar">نهتم</span></div>
+          <div class="value-item__label"><strong>Care</strong>We Care</div>
           <div class="value-item__desc">We care about the impact of our actions on the world around us and contributing to a better future.</div>
         </div>
       </div>
@@ -922,13 +825,13 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div style="background:var(--near-black);border-radius:16px;padding:18px 22px">
             <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.5;margin-bottom:10px">CEO Message</div>
             <div style="font-size:17px;font-weight:700;color:var(--white)">Khalid Al Asmi</div>
-            <div style="font-size:13px;color:var(--orange);font-weight:600"><span class="en">Chief Executive Officer</span><span class="ar">الرئيس التنفيذي</span></div>
+            <div style="font-size:13px;color:var(--orange);font-weight:600">Chief Executive Officer</div>
           </div>
         </div>
         <div class="reveal-right">
-          <p class="section-label"><span class="en">A Message from the OQBI CEO</span><span class="ar">رسالة من الرئيس التنفيذي لأوكيو للصناعات الأساسية</span></p>
+          <p class="section-label">A Message from the OQBI CEO</p>
           <h2 class="section-heading"><span class="en">Dedicated to delivering high-quality, essential-base chemicals</span><span class="ar">ملتزمون بتقديم مواد كيميائية أساسية عالية الجودة</span></h2>
-          <p class="section-sub" style="margin-bottom:16px">At OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span>, we are dedicated to delivering high-quality, essential-base chemicals that power industries and improve lives around the world. <span class="en">Our commitment to</span><span class="ar">التزامنا من أجل</span> sustainable development, innovation and operational excellence is reflected in everything we do, from producing methanol that supports clean energy solutions to ammonia that bolsters global food security, and the LPG products powering homes and industries across the world.</p>
+          <p class="section-sub" style="margin-bottom:16px">At OQ Base Industries, we are dedicated to delivering high-quality, essential-base chemicals that power industries and improve lives around the world. Our commitment to sustainable development, innovation and operational excellence is reflected in everything we do, from producing methanol that supports clean energy solutions to ammonia that bolsters global food security, and the LPG products powering homes and industries across the world.</p>
           <p class="section-sub" style="margin-bottom:16px">As a proud Omani company with a global outlook, we leverage our strategic location and talented workforce to meet the evolving needs of our customers and communities. Our advanced facilities in the Salalah Free Zone allow us to operate with unmatched efficiency and reliability, ensuring we contribute to economic growth both locally and globally.</p>
           <p class="section-sub">Our success is driven by the dedication to the wellbeing of both our people and the planet, fostering a culture of safety, respect and collaboration, where every employee feels empowered to contribute to our shared goals.</p>
         </div>
@@ -936,50 +839,50 @@ textarea.form-input{resize:vertical;min-height:110px}
     </div>
   </section>
 
-  <!-- <span class="en">Our Journey</span><span class="ar">مسيرتنا</span> Timeline -->
+  <!-- Our Journey Timeline -->
   <section class="section">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Our Journey</span><span class="ar">مسيرتنا</span></p>
-      <h2 class="section-heading reveal"><span class="en">OQBI's story of downstream production started in 2010</span><span class="ar">بدأت قصة أوكيو للصناعات الأساسية في التصنيع عام 2010</span></h2>
+      <p class="section-label reveal">Our Journey</p>
+      <h2 class="section-heading reveal"><span class="en">OQBI's story of downstream production started in 2010</span><span class="ar">بدأت قصة أوكيو في الإنتاج التحويلي عام 2010</span></h2>
       <div class="timeline-wrap reveal" style="margin-top:36px">
         <div class="timeline-track" id="timelineTrack">
           <!-- Set 1 -->
-          <div class="timeline-item"><div class="timeline-year">2006</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Salalah Methanol Company formed</span><span class="ar">تأسيس شركة ميثانول صلالة</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2006</div><div class="timeline-circle"></div><div class="timeline-label">Salalah Methanol Company formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2010</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of methanol plant</span><span class="ar">تدشين مصنع الميثانول</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2010</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of methanol plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Ammonia plant project formed</span><span class="ar">تأسيس مشروع مصنع الأمونيا</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-circle"></div><div class="timeline-label">Ammonia plant project formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Salalah LPG plant project formed</span><span class="ar">تأسيس مشروع مصنع الغاز البترولي المُسال بصلالة</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-circle"></div><div class="timeline-label">Salalah LPG plant project formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Oman Oil & Orpic Group integration</span><span class="ar">اندماج مجموعة أوكيو وأورپك</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-circle"></div><div class="timeline-label">Oman Oil & Orpic Group integration</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">OQ brand unveiled</span><span class="ar">الكشف عن علامة أوكيو التجارية</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-circle"></div><div class="timeline-label">OQ brand unveiled</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of LPG plant</span><span class="ar">تدشين مصنع الغاز البترولي المُسال</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of LPG plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of ammonia plant</span><span class="ar">تدشين مصنع الأمونيا</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of ammonia plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">OQBI brand unveiled & IPO on MSX</span><span class="ar">الكشف عن علامة أوكيو للصناعات الأساسية والطرح العام في بورصة مسقط</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-circle"></div><div class="timeline-label">OQBI brand unveiled &amp; IPO on MSX</div></div>
           <div class="timeline-connector"></div>
           <!-- Set 2 (duplicate for seamless loop) -->
-          <div class="timeline-item"><div class="timeline-year">2006</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Salalah Methanol Company formed</span><span class="ar">تأسيس شركة ميثانول صلالة</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2006</div><div class="timeline-circle"></div><div class="timeline-label">Salalah Methanol Company formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2010</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of methanol plant</span><span class="ar">تدشين مصنع الميثانول</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2010</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of methanol plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Ammonia plant project formed</span><span class="ar">تأسيس مشروع مصنع الأمونيا</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2014</div><div class="timeline-circle"></div><div class="timeline-label">Ammonia plant project formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Salalah LPG plant project formed</span><span class="ar">تأسيس مشروع مصنع الغاز البترولي المُسال بصلالة</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-circle"></div><div class="timeline-label">Salalah LPG plant project formed</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Oman Oil & Orpic Group integration</span><span class="ar">اندماج مجموعة أوكيو وأورپك</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-circle"></div><div class="timeline-label">Oman Oil & Orpic Group integration</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">OQ brand unveiled</span><span class="ar">الكشف عن علامة أوكيو التجارية</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-circle"></div><div class="timeline-label">OQ brand unveiled</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of LPG plant</span><span class="ar">تدشين مصنع الغاز البترولي المُسال</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of LPG plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">Commissioning of ammonia plant</span><span class="ar">تدشين مصنع الأمونيا</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-circle"></div><div class="timeline-label">Commissioning of ammonia plant</div></div>
           <div class="timeline-connector"></div>
-          <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-circle"></div><div class="timeline-label"><span class="en">OQBI brand unveiled & IPO on MSX</span><span class="ar">الكشف عن علامة أوكيو للصناعات الأساسية والطرح العام في بورصة مسقط</span></div></div>
+          <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-circle"></div><div class="timeline-label">OQBI brand unveiled &amp; IPO on MSX</div></div>
         </div>
       </div>
     </div>
@@ -988,71 +891,71 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Leadership: Board of Directors -->
   <section class="section bg-light" id="oqbi-leadership">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Our Team</span><span class="ar">فريقنا</span></p>
+      <p class="section-label reveal">Our Team</p>
       <h2 class="section-heading reveal"><span class="en">OQBI Leadership</span><span class="ar">قيادة أوكيو للصناعات الأساسية</span></h2>
       <h3 style="font-size:clamp(16px,1.8vw,22px);font-weight:600;color:var(--dark);margin:28px 0 18px" class="reveal">Board of Directors</h3>
       <div class="people-grid">
-        <div class="person-card reveal d1" onclick="openModal('Board of Directors','Ali Al Lawati','<span class="en">Chairman of the Board</span><span class="ar">رئيس مجلس الإدارة</span>','Ali Al Lawati has 20 years of experience and over 8 years of international experience, currently serving as the Chief People & Technology Officer of OQ. Ali focuses on portfolio diversification, in-country value creation through industry localisation, attracting investments, local SME development, job and diversity creation and local talent development. In his previous role as the Global Human Resources Director – Corporate at SLB, Ali oversaw Technology, HR, Legal, HSE, OS/IT, Finance, Strategy and Sustainability, Alternative Energy, Mergers & Acquisitions functions, and corporate offices in Paris, London and Houston. He was instrumental in driving the company\'s long-term strategy through the development of business strategy, organizational model, and operational performance, always prioritizing safety and minimizing environmental impact. Ali holds a Bachelor\'s Degree in Petroleum and Natural Gas Engineering from Sultan Qaboos University.')">
+        <div class="person-card reveal d1" onclick="openModal('ali-al-lawati')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Ali Al Lawati</div>
-            <div class="person-card__sub"><span class="en">Chairman of the Board</span><span class="ar">رئيس مجلس الإدارة</span></div>
+            <div class="person-card__sub">Chairman of the Board</div>
           </div>
         </div>
-        <div class="person-card reveal d2" onclick="openModal('Board of Directors','Saleh Al Mahthuri','<span class="en">Deputy Chairman</span><span class="ar">نائب رئيس مجلس الإدارة</span>','Bringing 20 years of experience in finance, accounting, and auditing, Saleh is currently the General Manager of Internal Audit at the Port of Salalah, where he oversees audit processes to ensure financial compliance and transparency. Previously, Saleh was the Chief Internal Auditor at Nama Electricity Supply Company and held key positions at OQ Exploration & Production, Daleel Petroleum, and Occidental Petroleum. He holds a Bachelor\'s degree in Accounting from Sultan Qaboos University and a Master\'s degree in Management Information Technology and Governance from Canadian University Dubai. Additionally, Saleh is a Certified Internal Auditor and a member of the Education Committee of the IIA Oman Chapter.')">
+        <div class="person-card reveal d2" onclick="openModal('saleh-al-mahthuri')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Saleh Al Mahthuri</div>
-            <div class="person-card__sub"><span class="en">Deputy Chairman</span><span class="ar">نائب رئيس مجلس الإدارة</span></div>
+            <div class="person-card__sub">Deputy Chairman</div>
           </div>
         </div>
-        <div class="person-card reveal d3" onclick="openModal('Board of Directors','Ghalib Al Maamari','Member','Ghalib Al Maamari is the Chief Business Development at OQ Alternative Energy, focusing on renewables, low carbon molecules, and energy efficiency. He has over 19 years of experience in commercial development, financial planning, and project management. Previously, he was Vice President of Integrated Digital Solutions, leading OQ\'s digital transformation. His background includes roles at Takamul Investment Company, Occidental Petroleum Corporation, and Oman Shipping Company. Ghalib has served as Vice Chairman of Vale in Oman and on the boards of various organisations. He holds a bachelor\'s degree in electronic commerce and a master\'s in business information systems from the University of Queensland, Australia.')">
+        <div class="person-card reveal d3" onclick="openModal('ghalib-al-maamari')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Ghalib Al Maamari</div>
-            <div class="person-card__sub"><span class="en">Member</span><span class="ar">عضو مجلس الإدارة</span></div>
+            <div class="person-card__sub">Member</div>
           </div>
         </div>
-        <div class="person-card reveal d1" onclick="openModal('Board of Directors','Pieter Steyn','Member','Pieter Steyn is the Vice President Legal for Downstream & Commercial at OQ Group, with over 25 years of experience in the oil, gas, petrochemical, and energy sectors. His career includes roles in both in-house legal counsel and commercial management, focusing on pragmatic solutions. He has contributed to the development and financing of major international projects in various countries, including the United States, China, and Oman. Previously, he was Commercial Lead at OQ8 before transitioning to OQ in 2020. Pieter holds a Diploma and bachelor\'s degree in law, along with a master\'s in business leadership from the University of South Africa, and is an admitted Attorney of the High Court of South Africa.')">
+        <div class="person-card reveal d1" onclick="openModal('pieter-steyn')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Pieter Steyn</div>
-            <div class="person-card__sub"><span class="en">Member</span><span class="ar">عضو مجلس الإدارة</span></div>
+            <div class="person-card__sub">Member</div>
           </div>
         </div>
-        <div class="person-card reveal d2" onclick="openModal('Board of Directors','Hamed Al Rumhi','Member','Hamed holds a Bachelor of Commerce and Economics from Sultan Qaboos University and brings extensive HR and management experience. Since October 2021, he has served as Consulting Services Director at Takatuf Oman, leading consulting strategies and key partnerships. Previously, he was a Managing Consultant at Takatuf Oman, overseeing HR consultancy projects. He also held leadership roles at Shell Development Oman and OQ Exploration & Production, contributing to organisational development and human capital strategies.')">
+        <div class="person-card reveal d2" onclick="openModal('hamed-al-rumhi')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Hamed Al Rumhi</div>
-            <div class="person-card__sub"><span class="en">Member</span><span class="ar">عضو مجلس الإدارة</span></div>
+            <div class="person-card__sub">Member</div>
           </div>
         </div>
-        <div class="person-card reveal d3" onclick="openModal('Board of Directors','Irfan Mian','Member','Irfan Mian is an investment professional with nearly 25 years of global experience in private equity, portfolio management, and advisory. Currently, Irfan is part of the Public Investment Fund\'s Regional Investments Private Equity team, responsible for deploying $24bn across six regional economies, including Oman. He played a key role in PIF\'s participation in Oman\'s recent MSX listings of state assets. Previously, Irfan established and led the Mining Unit at Mubadala Investment Company, where he developed the first UAE-based platform for global mining investments and helped manage a multi-billion dollar portfolio. He holds degrees from the London School of Economics, University of Oxford, and an MBA from IESE Business School.')">
+        <div class="person-card reveal d3" onclick="openModal('irfan-mian')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Irfan Mian</div>
-            <div class="person-card__sub"><span class="en">Member</span><span class="ar">عضو مجلس الإدارة</span></div>
+            <div class="person-card__sub">Member</div>
           </div>
         </div>
-        <div class="person-card reveal d4" onclick="openModal('Board of Directors','Bader AlHamad','Member','Bader AlHamad is a Director in the Principal Investment Group at Gulf Investment Corporation (GIC), bringing significant international experience. He previously worked at Dow Chemical Company in Zurich, where he handled commercial and supply chain operations. At GIC, Bader plays a key role in strategic investment decisions and governance, serving on several boards across manufacturing, chemicals, and education sectors within the GCC. He holds a bachelor\'s degree in chemical engineering from Vanderbilt University and has enhanced his expertise through general management programs at the University of Chicago Booth School of Business.')">
+        <div class="person-card reveal d4" onclick="openModal('bader-alhamad')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Board of Directors</div>
             <div class="person-card__name">Bader AlHamad</div>
-            <div class="person-card__sub"><span class="en">Member</span><span class="ar">عضو مجلس الإدارة</span></div>
+            <div class="person-card__sub">Member</div>
           </div>
         </div>
       </div>
@@ -1060,40 +963,40 @@ textarea.form-input{resize:vertical;min-height:110px}
       <!-- <span class="en">Executive Team</span><span class="ar">الفريق التنفيذي</span> -->
       <h3 style="font-size:clamp(16px,1.8vw,22px);font-weight:600;color:var(--dark);margin:48px 0 18px" class="reveal">Executive Team</h3>
       <div class="people-grid">
-        <div class="person-card reveal d1" onclick="openModal('Executive Team','Khalid Al Asmi','<span class="en">Chief Executive Officer</span><span class="ar">الرئيس التنفيذي</span>','As Chief Executive, Khalid Al Asmi has over 20 years of extensive experience in the oil and energy industry. Prior to his current position, Khalid held various senior roles at OQ, including Vice President of Downstream Technical Services, Vice President of Downstream Maintenance and Operations General Manager of the Aromatics Complex for OQ Refineries and Petroleum Industries LLC, as well as Vice Chairman of Major Tender Board. He has also previously served as board member of Bharat Oman Refinery Limited and Operations Manager Area-1 of Sohar Refinery. Khalid started his career at Sohar Refinery Company and PDO. He holds a Bachelor of Science (BSc) degree and a Master of Science (MSc) in Chemical Engineering from the University of Nottingham (UK).')">
+        <div class="person-card reveal d1" onclick="openModal('khalid-al-asmi')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Executive Team</div>
             <div class="person-card__name">Khalid Al Asmi</div>
-            <div class="person-card__sub"><span class="en">Chief Executive Officer</span><span class="ar">الرئيس التنفيذي</span></div>
+            <div class="person-card__sub">Chief Executive Officer</div>
           </div>
         </div>
-        <div class="person-card reveal d2" onclick="openModal('Executive Team','Ahmed Al Baraami','<span class="en">Chief Finance Officer</span><span class="ar">الرئيس المالي</span>','Ahmed Al Baraami has over 20 years of extensive experience in leading financial operations, strategic planning and corporate governance mainly in the petrochemical and oil and gas sectors. Prior to his current position, Ahmed served as Vice President of Finance & Contracts at the Company. He has also served as General Manager at Safayn Shipping Company and was the Director of Strategic Planning at Gulf Energy SAOC. Additionally, Ahmed has held various positions in prominent Middle Eastern oil and gas companies such as Schlumberger. Ahmed holds a Master of Business Administration (MBA) from the University of Houston-Clear Lake (USA) and a Bachelor of Science in Accounting from University of Jordan.')">
+        <div class="person-card reveal d2" onclick="openModal('ahmed-al-baraami')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Executive Team</div>
             <div class="person-card__name">Ahmed Al Baraami</div>
-            <div class="person-card__sub"><span class="en">Chief Finance Officer</span><span class="ar">الرئيس المالي</span></div>
+            <div class="person-card__sub">Chief Finance Officer</div>
           </div>
         </div>
-        <div class="person-card reveal d3" onclick="openModal('Executive Team','Ihsan Al Jandal','<span class="en">Chief Operations Officer</span><span class="ar">الرئيس التشغيلي</span>','Ihsan Al Jandal has over 20 years of diverse experience in the petrochemical and energy industries. Prior to his current role, Ihsan served as Vice President of Operations at OQ and Director of Maintenance & Engineering, Maintenance Manager and Head of the Mechanical Department at the Company. He also worked as a mechanical engineer at Oman India Fertiliser Company SAOC and a field services engineer at GE Oil & Gas. Ihsan holds a Bachelor of Engineering (BEng) in Mechanical Engineering from Loughborough University (UK).')">
+        <div class="person-card reveal d3" onclick="openModal('ihsan-al-jandal')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Executive Team</div>
             <div class="person-card__name">Ihsan Al Jandal</div>
-            <div class="person-card__sub"><span class="en">Chief Operations Officer</span><span class="ar">الرئيس التشغيلي</span></div>
+            <div class="person-card__sub">Chief Operations Officer</div>
           </div>
         </div>
-        <div class="person-card reveal d4" onclick="openModal('Executive Team','Ahmed Muqaibal','Chief Executive – People, Technology and Communication','Ahmed Muqaibal has over 20 years of extensive experience with a diverse background spanning over two decades. Ahmed has held various leadership roles like Head of Assurance People & Culture and Director of Support Services at the Company, as well as General Manager of Support Services at Oman Tank Terminal Company LLC. Prior to joining the OQ Group, Ahmed worked as Procurement Manager (Network & IT) for Ooredoo and Contracts Engineer & Supply Chain analyst for PDO and Occidental Petroleum Corp. He holds a Bachelor\'s degree in Business Administration and Management Information Systems from University of Arizona (USA) and a Chartered Institute of Procurement and Supply (CIPS) certification.')">
+        <div class="person-card reveal d4" onclick="openModal('ahmed-muqaibal')">
           <div class="img-ph person-card__img" style="height:190px">PHOTO</div>
-          <div class="person-card__overlay"><span><span class="en">View Profile</span><span class="ar">عرض الملف الشخصي</span></span></div>
+          <div class="person-card__overlay"><span>View Profile</span></div>
           <div class="person-card__body">
             <div class="person-card__role">Executive Team</div>
             <div class="person-card__name">Ahmed Muqaibal</div>
-            <div class="person-card__sub"><span class="en">Chief Executive – People, Technology & Communication</span><span class="ar">الرئيس التنفيذي للموارد البشرية والتقنية والاتصالات</span></div>
+            <div class="person-card__sub">Chief Executive – People, Technology & Communication</div>
           </div>
         </div>
       </div>
@@ -1105,8 +1008,8 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div class="dark-section" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">Health, Safety, Security & Environment</span><span class="ar">الصحة والسلامة والأمن والبيئة</span></p>
-          <h2 class="section-heading"><span class="en">Safety First, Always</span><span class="ar">السلامة أولاً، دائمًا</span></h2>
+          <p class="section-label">Health, Safety, Security & Environment</p>
+          <h2 class="section-heading"><span class="en">Safety First, Always</span><span class="ar">السلامة أولاً دائمًا</span></h2>
           <p class="section-sub" style="margin-bottom:18px">We recognise that the risks associated with our business activities can potentially have a serious impact if not managed appropriately. As such, safety is an absolute priority for OQBI.</p>
           <p class="section-sub">We are systematic and proactive in identifying and managing workplace and operational risks to ensure the wellbeing of our people, the safety of our operations and the protection of the environment.</p>
         </div>
@@ -1127,7 +1030,7 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__content">
       <p class="hero__eyebrow"><span class="en">What We Do</span><span class="ar">أعمالنا</span></p>
       <h1 class="hero__title"><span class="en">Our Products</span><span class="ar">منتجاتنا</span></h1>
-      <p class="hero__subtitle"><span class="en">As a regional leader in base chemical production, OQBI produces 1.8 million tons per annum (Mtpa) of methanol, ammonia and LPG products, meeting global demand.</span><span class="ar">بصفتنا رواد إقليميون في إنتاج المواد الكيميائية الأساسية، تنتج أوكيو للصناعات الأساسية 1.8 مليون طن سنويًا من الميثانول والأمونيا ومنتجات الغاز البترولي المُسال لتلبية الطلب العالمي.</span></p>
+      <p class="hero__subtitle"><span class="en"><span class="en">As a regional leader in base chemical production, OQBI produces 1.8 million tons per annum (Mtpa) of methanol, ammonia and LPG products, meeting global demand.</span><span class="ar">بصفتنا رواد إقليميون في إنتاج المواد الكيميائية الأساسية، تنتج أوكيو للصناعات الأساسية 1.8 مليون طن سنويًا من الميثانول والأمونيا ومنتجات الغاز البترولي المُسال لتلبية الطلب العالمي.</span></span><span class="ar">بصفتنا رواد إقليميون في إنتاج المواد الكيميائية الأساسية، تنتج أوكيو للصناعات الأساسية 1.8 مليون طن سنويًا من الميثانول والأمونيا ومنتجات الغاز البترولي المُسال لتلبية الطلب العالمي.</span></p>
     </div>
   </section>
 
@@ -1136,27 +1039,27 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">Production Plants</span><span class="ar">محطات الإنتاج</span></p>
+          <p class="section-label">Production Plants</p>
           <h2 class="section-heading"><span class="en">State-of-the-art production in Salalah Free Zone</span><span class="ar">إنتاج متطور في المنطقة الحرة بصلالة</span></h2>
           <p class="section-sub" style="margin-bottom:16px">Our three advanced plants transform Oman's natural gas into essential products for cooking, heating, transport, manufacturing and multiple other uses. Serving over 15 countries across three continents, we drive economies and empower communities.</p>
           <p class="section-sub">OQBI's three production plants are located in the Salalah Free Zone (SFZ), which provides corporate tax exemption, and receive feedstock under long-term contracts with the Integrated Gas Company (IGC) through a pipeline network operated by OQ Gas Networks.</p>
         </div>
         <div class="reveal-right">
           <div style="background:var(--near-black);border-radius:var(--r-card);padding:28px 32px">
-            <div class="section-label" style="color:var(--teal);margin-bottom:14px"><span class="en">Exports</span><span class="ar">الصادرات</span></div>
+            <div class="section-label" style="color:var(--teal);margin-bottom:14px">Exports</div>
             <p style="font-size:clamp(14px,1.5vw,18px);color:rgba(255,255,255,.82);line-height:1.68;font-weight:300">100% of methanol and ammonia production and 87% of LPG products production are exported outside of Oman via OQ Trading (OQ Group's global trading business).</p>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px">
               <div style="text-align:center;padding:16px;background:rgba(0,174,188,.12);border-radius:14px;border:1px solid rgba(0,174,188,.25)">
                 <div style="font-size:22px;font-weight:800;color:var(--white)">100%</div>
-                <div style="font-size:11px;color:var(--teal);margin-top:4px"><span class="en">Methanol exported</span><span class="ar">الميثانول المُصدَّر</span></div>
+                <div style="font-size:11px;color:var(--teal);margin-top:4px">Methanol exported</div>
               </div>
               <div style="text-align:center;padding:16px;background:rgba(0,174,188,.12);border-radius:14px;border:1px solid rgba(0,174,188,.25)">
                 <div style="font-size:22px;font-weight:800;color:var(--white)">100%</div>
-                <div style="font-size:11px;color:var(--teal);margin-top:4px"><span class="en">Ammonia exported</span><span class="ar">الأمونيا المُصدَّرة</span></div>
+                <div style="font-size:11px;color:var(--teal);margin-top:4px">Ammonia exported</div>
               </div>
               <div style="text-align:center;padding:16px;background:rgba(255,130,0,.12);border-radius:14px;border:1px solid rgba(255,130,0,.25)">
                 <div style="font-size:22px;font-weight:800;color:var(--white)">87%</div>
-                <div style="font-size:11px;color:var(--orange);margin-top:4px"><span class="en">LPG exported</span><span class="ar">الغاز البترولي المُسال المُصدَّر</span></div>
+                <div style="font-size:11px;color:var(--orange);margin-top:4px">LPG exported</div>
               </div>
             </div>
           </div>
@@ -1169,7 +1072,7 @@ textarea.form-input{resize:vertical;min-height:110px}
   <section class="section bg-light">
     <div class="container">
       <p class="section-label reveal"><span class="en">Our Three Products</span><span class="ar">منتجاتنا الثلاثة</span></p>
-      <h2 class="section-heading reveal"><span class="en">Methanol, Ammonia & LPG</span><span class="ar">الميثانول والأمونيا والغاز البترولي المُسال</span></h2>
+      <h2 class="section-heading reveal"><span class="en">Methanol, Ammonia &amp; LPG</span><span class="ar">الميثانول والأمونيا والغاز البترولي المُسال</span></h2>
       <div class="product-cards">
 
         <!-- LPG -->
@@ -1245,7 +1148,7 @@ textarea.form-input{resize:vertical;min-height:110px}
   <section class="section" style="background:var(--near-black)">
     <div class="container">
       <div class="dark-section" style="margin-bottom:28px">
-        <p class="section-label reveal"><span class="en">Markets around the world</span><span class="ar">الأسواق حول العالم</span></p>
+        <p class="section-label reveal">Markets around the world</p>
         <h2 class="section-heading reveal"><span class="en">Global Reach — 15+ Countries, 3 Continents</span><span class="ar">وصول عالمي — أكثر من 15 دولة في 3 قارات</span></h2>
       </div>
       <!-- Product Tab Selector -->
@@ -1258,31 +1161,31 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div class="img-ph" style="position:absolute;inset:0;border-radius:var(--r-card);opacity:.14">WORLD MAP</div>
         <!-- LPG Pins -->
         <div id="map-LPG" style="position:absolute;inset:0">
-          <div class="map-label" style="top:30%;left:12%"><span class="en">North America</span><span class="ar">أمريكا الشمالية</span><div class="map-tooltip">LPG — <span class="en">North America</span><span class="ar">أمريكا الشمالية</span></div></div>
-          <div class="map-label" style="top:26%;left:42%"><span class="en">Europe</span><span class="ar">أوروبا</span><div class="map-tooltip">LPG — Europe</div></div>
+          <div class="map-label" style="top:30%;left:12%">North America<div class="map-tooltip">LPG — North America</div></div>
+          <div class="map-label" style="top:26%;left:42%">Europe<div class="map-tooltip">LPG — Europe</div></div>
           <div class="map-label" style="top:42%;left:60%">Oman 🇴🇲<div class="map-tooltip">LPG — Oman (13% domestic)</div></div>
-          <div class="map-label" style="top:40%;left:72%"><span class="en">India</span><span class="ar">الهند</span><div class="map-tooltip">LPG — India</div></div>
-          <div class="map-label" style="top:36%;left:83%"><span class="en">China</span><span class="ar">الصين</span><div class="map-tooltip">LPG — China</div></div>
-          <div class="map-label" style="top:52%;left:28%"><span class="en">West Africa</span><span class="ar">غرب أفريقيا</span><div class="map-tooltip">LPG — <span class="en">West Africa</span><span class="ar">غرب أفريقيا</span></div></div>
+          <div class="map-label" style="top:40%;left:72%">India<div class="map-tooltip">LPG — India</div></div>
+          <div class="map-label" style="top:36%;left:83%">China<div class="map-tooltip">LPG — China</div></div>
+          <div class="map-label" style="top:52%;left:28%">West Africa<div class="map-tooltip">LPG — West Africa</div></div>
         </div>
         <!-- Methanol Pins -->
         <div id="map-Methanol" style="position:absolute;inset:0;display:none">
-          <div class="map-label" style="top:26%;left:42%"><span class="en">Europe</span><span class="ar">أوروبا</span><div class="map-tooltip">Methanol — Europe</div></div>
+          <div class="map-label" style="top:26%;left:42%">Europe<div class="map-tooltip">Methanol — Europe</div></div>
           <div class="map-label" style="top:42%;left:60%">Oman 🇴🇲<div class="map-tooltip">Methanol — Origin</div></div>
-          <div class="map-label" style="top:40%;left:72%"><span class="en">India</span><span class="ar">الهند</span><div class="map-tooltip">Methanol — India</div></div>
-          <div class="map-label" style="top:36%;left:83%"><span class="en">China</span><span class="ar">الصين</span><div class="map-tooltip">Methanol — China</div></div>
-          <div class="map-label" style="top:32%;left:55%"><span class="en">Turkey</span><span class="ar">تركيا</span><div class="map-tooltip">Methanol — Turkey</div></div>
-          <div class="map-label" style="top:58%;left:78%"><span class="en">SE Asia</span><span class="ar">جنوب شرق آسيا</span><div class="map-tooltip">Methanol — <span class="en">SE Asia</span><span class="ar">جنوب شرق آسيا</span></div></div>
-          <div class="map-label" style="top:45%;left:88%"><span class="en">South Korea</span><span class="ar">كوريا الجنوبية</span><div class="map-tooltip">Methanol — <span class="en">South Korea</span><span class="ar">كوريا الجنوبية</span></div></div>
+          <div class="map-label" style="top:40%;left:72%">India<div class="map-tooltip">Methanol — India</div></div>
+          <div class="map-label" style="top:36%;left:83%">China<div class="map-tooltip">Methanol — China</div></div>
+          <div class="map-label" style="top:32%;left:55%">Turkey<div class="map-tooltip">Methanol — Turkey</div></div>
+          <div class="map-label" style="top:58%;left:78%">SE Asia<div class="map-tooltip">Methanol — SE Asia</div></div>
+          <div class="map-label" style="top:45%;left:88%">South Korea<div class="map-tooltip">Methanol — South Korea</div></div>
         </div>
         <!-- Ammonia Pins -->
         <div id="map-Ammonia" style="position:absolute;inset:0;display:none">
           <div class="map-label" style="top:42%;left:60%">Oman 🇴🇲<div class="map-tooltip">Ammonia — Origin</div></div>
-          <div class="map-label" style="top:40%;left:72%"><span class="en">India</span><span class="ar">الهند</span><div class="map-tooltip">Ammonia — India (key market)</div></div>
-          <div class="map-label" style="top:36%;left:83%"><span class="en">China</span><span class="ar">الصين</span><div class="map-tooltip">Ammonia — China</div></div>
-          <div class="map-label" style="top:26%;left:42%"><span class="en">Europe</span><span class="ar">أوروبا</span><div class="map-tooltip">Ammonia — Europe</div></div>
-          <div class="map-label" style="top:52%;left:50%"><span class="en">East Africa</span><span class="ar">شرق أفريقيا</span><div class="map-tooltip">Ammonia — <span class="en">East Africa</span><span class="ar">شرق أفريقيا</span></div></div>
-          <div class="map-label" style="top:68%;left:28%"><span class="en">South America</span><span class="ar">أمريكا الجنوبية</span><div class="map-tooltip">Ammonia — <span class="en">South America</span><span class="ar">أمريكا الجنوبية</span></div></div>
+          <div class="map-label" style="top:40%;left:72%">India<div class="map-tooltip">Ammonia — India (key market)</div></div>
+          <div class="map-label" style="top:36%;left:83%">China<div class="map-tooltip">Ammonia — China</div></div>
+          <div class="map-label" style="top:26%;left:42%">Europe<div class="map-tooltip">Ammonia — Europe</div></div>
+          <div class="map-label" style="top:52%;left:50%">East Africa<div class="map-tooltip">Ammonia — East Africa</div></div>
+          <div class="map-label" style="top:68%;left:28%">South America<div class="map-tooltip">Ammonia — South America</div></div>
         </div>
       </div>
     </div>
@@ -1296,9 +1199,9 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__bg img-ph" style="height:100%;position:absolute;inset:0;opacity:.45">CAREERS HERO</div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow"><span class="en">People & Careers</span><span class="ar">كوادرنا</span></p>
-      <h1 class="hero__title"><span class="en"><span class="en">Empowering industries,</span><span class="ar">نعزز الصناعات،</span><br><em><span class="en">enriching lives.</span><span class="ar">ونثري الحياة.</span></em></span><span class="ar">نعزز الصناعات<br><em>ونثري الحياة.</em></span></h1>
-      <p class="hero__subtitle"><span class="en">Located in Salalah, Sultanate of Oman — join a team driven by excellence, safety and sustainability.</span><span class="ar">في صلالة، سلطنة عُمان — انضم إلى فريق مدفوع بالتميز والسلامة والاستدامة.</span></p>
+      <p class="hero__eyebrow"><span class="en">People & Careers</span><span class="ar">كوادرنا والوظائف</span></p>
+      <h1 class="hero__title"><span class="en">Empowering industries,<br><em>enriching lives.</em></span><span class="ar">نعزز الصناعات<br><em>ونثري الحياة.</em></span></h1>
+      <p class="hero__subtitle"><span class="en"><span class="en">Located in Salalah, Sultanate of Oman — join a team driven by excellence, safety and sustainability.</span><span class="ar">في صلالة، سلطنة عُمان — انضم إلى فريق مدفوع بالتميز والسلامة والاستدامة.</span></span><span class="ar">في صلالة، سلطنة عُمان — انضم إلى فريق مدفوع بالتميز والسلامة والاستدامة.</span></p>
     </div>
   </section>
 
@@ -1307,7 +1210,7 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">Why OQBI</span><span class="ar">لماذا أوكيو</span></p>
+          <p class="section-label">Why OQBI</p>
           <h2 class="section-heading"><span class="en">At OQBI, we believe that our people are the cornerstone of our success</span><span class="ar">في أوكيو للصناعات الأساسية، نؤمن أن كوادرنا هم سر نجاحنا</span></h2>
           <p class="section-sub" style="margin-bottom:16px">OQBI's success is driven by our people-focused culture, guided by our core values: Belong, Perform, Collaborate, and Care. We foster inclusivity, set ambitious goals, and encourage collaboration, ensuring our skilled and motivated team drives sustainable growth and operational excellence.</p>
           <p class="section-sub"><span class="en">We support our employees in making a meaningful difference in the communities where we operate, as well as their professional development to harness their full potential.</span><span class="ar">ندعم موظفينا في إحداث فارق حقيقي في المجتمعات التي نعمل فيها، فضلاً عن تطوير مسيرتهم المهنية للاستفادة من إمكاناتهم الكاملة.</span></p>
@@ -1322,8 +1225,8 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Employee Value Proposition -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">OQBI: Our employee value proposition</span><span class="ar">أوكيو للصناعات الأساسية: القيمة المضافة لموظفينا</span></p>
-      <h2 class="section-heading reveal"><span class="en">What We Offer</span><span class="ar">ما نقدمه لكم</span></h2>
+      <p class="section-label reveal">OQBI: Our employee value proposition</p>
+      <h2 class="section-heading reveal"><span class="en">What We Offer</span><span class="ar">ما نقدمه</span></h2>
       <div class="evp-grid reveal" style="margin-top:28px">
         <div class="evp-card">
           <div class="evp-card__icon">🏆</div>
@@ -1345,16 +1248,16 @@ textarea.form-input{resize:vertical;min-height:110px}
     </div>
   </section>
 
-  <!-- <span class="en">Career Opportunities</span><span class="ar">الفرص الوظيفية</span> -->
+  <!-- Career Opportunities -->
   <section class="section">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Career Opportunities</span><span class="ar">الفرص الوظيفية</span></p>
-      <h2 class="section-heading reveal"><span class="en">Join us and help reshape the global chemistry landscape</span><span class="ar">انضم إلينا وساعدنا في إعادة تشكيل قطاع الكيماويات العالمي</span></h2>
+      <p class="section-label reveal">Career Opportunities</p>
+      <h2 class="section-heading reveal"><span class="en">Join us and help reshape the global chemistry landscape</span><span class="ar">انضم إلينا وساعدنا في إعادة رسم ملامح الصناعة الكيميائية العالمية</span></h2>
       <p class="section-sub reveal" style="margin-bottom:36px">Pioneers and innovators, scientists and engineers, dreamers and thinkers – our people are our most valuable asset. Explore career opportunities with us and find out how your passion can make a difference.</p>
       <div style="background:var(--light-bg);border-radius:var(--r-card);padding:clamp(24px,4vw,48px);text-align:center" class="reveal">
-        <div style="font-size:clamp(16px,2vw,24px);font-weight:600;color:var(--dark);margin-bottom:12px"><span class="en">No Current Openings</span><span class="ar">لا توجد فرص وظيفية متاحة حاليًا</span></div>
-        <p style="font-size:14px;color:#666;margin-bottom:24px;max-width:480px;margin:0 auto 24px"><span class="en">Please keep posted for OQBI's latest job announcements and career opportunities.</span><span class="ar">تابعنا للاطلاع على أحدث إعلانات التوظيف وفرص العمل في أوكيو للصناعات الأساسية.</span></p>
-        <button class="btn btn--orange" onclick="showPage('news')"><span class="en">Follow our Latest News</span><span class="ar">تابع أحدث أخبارنا</span></button>
+        <div style="font-size:clamp(16px,2vw,24px);font-weight:600;color:var(--dark);margin-bottom:12px">No Current Openings</div>
+        <p style="font-size:14px;color:#666;margin-bottom:24px;max-width:480px;margin:0 auto 24px">Please keep posted for OQBI's latest job announcements and career opportunities.</p>
+        <button class="btn btn--orange" onclick="showPage('news')">Follow our Latest News</button>
       </div>
     </div>
   </section>
@@ -1362,12 +1265,12 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Internship Banner -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Internship Programme</span><span class="ar">برنامج التدريب</span></p>
-      <h2 class="section-heading reveal" style="margin-bottom:22px"><span class="en">Empowering young talent to reach their full potential</span><span class="ar">تمكين المواهب الشابة للوصول إلى كامل إمكاناتها</span></h2>
+      <p class="section-label reveal">Internship Programme</p>
+      <h2 class="section-heading reveal" style="margin-bottom:22px"><span class="en">Empowering young talent to reach their full potential</span><span class="ar">تمكين المواهب الشابة للوصول إلى أقصى إمكاناتهم</span></h2>
       <div class="banner-card reveal">
         <div class="banner-card__bg img-ph"></div>
         <div class="banner-card__content">
-          <div class="banner-card__title"><span class="en">Internship Programme</span><span class="ar">برنامج التدريب</span></div>
+          <div class="banner-card__title">Internship Programme</div>
           <div class="banner-card__sub">Designed to provide fresh graduates with hands-on experience, comprehensive training, and the opportunity to work on real-world projects. Our graduate trainee initiatives will enable you to embark on a journey of growth, learning, and success.</div>
           <button class="btn btn--orange"><span class="en">Apply Now</span><span class="ar">قدّم الآن</span></button>
         </div>
@@ -1379,25 +1282,25 @@ textarea.form-input{resize:vertical;min-height:110px}
   <section class="section" style="background:var(--near-black)">
     <div class="container">
       <div class="dark-section">
-        <p class="section-label reveal"><span class="en">Our goals and targets</span><span class="ar">أهدافنا ومستهدفاتنا</span></p>
-        <h2 class="section-heading reveal"><span class="en">OQBI: Safety Exemplified</span><span class="ar">أوكيو للصناعات الأساسية: إنجازاتنا قدوة على مستوى السلامة</span></h2>
+        <p class="section-label reveal">Our goals and targets</p>
+        <h2 class="section-heading reveal"><span class="en">OQBI: Safety Exemplified</span><span class="ar">أوكيو للصناعات الأساسية: نموذج السلامة</span></h2>
         <p class="section-sub reveal" style="margin-bottom:28px">Through ongoing engagement with our employees, the implementation of best practices and the constant review of our safety performance, we strive to reduce risks and ensure the highest standards of safety across all our operations.</p>
       </div>
       <div class="safety-grid">
         <div class="safety-card reveal d1">
           <div class="safety-card__year">2021</div>
           <div class="safety-card__value">2.2M</div>
-          <div class="safety-card__label"><span class="en">Safe Manhours</span><span class="ar">ساعات عمل آمنة</span></div>
+          <div class="safety-card__label">Safe Manhours</div>
         </div>
         <div class="safety-card reveal d2">
           <div class="safety-card__year">2022</div>
           <div class="safety-card__value">2.0M</div>
-          <div class="safety-card__label"><span class="en">Safe Manhours</span><span class="ar">ساعات عمل آمنة</span></div>
+          <div class="safety-card__label">Safe Manhours</div>
         </div>
         <div class="safety-card reveal d3">
           <div class="safety-card__year">2023</div>
           <div class="safety-card__value">3.6M</div>
-          <div class="safety-card__label"><span class="en">Safe Manhours</span><span class="ar">ساعات عمل آمنة</span> · 0.28 LTIF</div>
+          <div class="safety-card__label">Safe Manhours · 0.28 LTIF</div>
         </div>
         <div class="safety-card reveal d4">
           <div class="safety-card__year">2024</div>
@@ -1409,11 +1312,11 @@ textarea.form-input{resize:vertical;min-height:110px}
       <!-- Safety Pillars -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:44px">
         <div class="reveal-left dark-section">
-          <h3 style="font-size:clamp(18px,2.2vw,28px);font-weight:700;color:var(--white);margin-bottom:12px"><span class="en">Empowering safety, elevating standards</span><span class="ar">تعزيز السلامة ورفع المعايير</span></h3>
+          <h3 style="font-size:clamp(18px,2.2vw,28px);font-weight:700;color:var(--white);margin-bottom:12px">Empowering safety, elevating standards</h3>
           <p style="font-size:clamp(13px,1.3vw,16px);color:rgba(255,255,255,.73);line-height:1.72;font-weight:300">Aligned with our core values – Belong, Perform, Collaborate, and Care – we prioritise safeguarding our workforce and communities by fostering a culture of proactive safety and continuous improvement.</p>
         </div>
         <div class="reveal-right dark-section">
-          <h3 style="font-size:clamp(18px,2.2vw,28px);font-weight:700;color:var(--white);margin-bottom:12px"><span class="en">Pioneering a greener future</span><span class="ar">الريادة نحو مستقبل أخضر</span></h3>
+          <h3 style="font-size:clamp(18px,2.2vw,28px);font-weight:700;color:var(--white);margin-bottom:12px">Pioneering a greener future</h3>
           <p style="font-size:clamp(13px,1.3vw,16px);color:rgba(255,255,255,.73);line-height:1.72;font-weight:300">OQBI is dedicated to reducing our environmental footprint through innovative decarbonisation initiatives and energy-efficient solutions. We are proud to contribute to the global energy transition by producing cleaner fuels and chemicals.</p>
         </div>
       </div>
@@ -1428,10 +1331,10 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__eyebrow"><span class="en">Sustainability</span><span class="ar">الاستدامة</span></p>
-      <h1 class="hero__title"><span class="en"><span class="en">Our commitment to</span><span class="ar">التزامنا من أجل</span><br><em><span class="en">lasting impact.</span><span class="ar">تأثير دائم.</span></em></span><span class="ar">التزامنا نحو<br><em>أثر مستدام.</em></span></h1>
-      <p class="hero__subtitle"><span class="en">Aligned with the Paris Agreement, UN SDGs, and Oman Vision 2040 — sustainability is at the core of everything we do.</span><span class="ar">متوافقون مع اتفاقية باريس وأهداف الأمم المتحدة للتنمية المستدامة ورؤية عُمان 2040 — الاستدامة في صميم كل ما نقوم به.</span></p>
+      <h1 class="hero__title"><span class="en">Our commitment to<br><em>lasting impact.</em></span><span class="ar">التزامنا نحو<br><em>أثر مستدام.</em></span></h1>
+      <p class="hero__subtitle"><span class="en"><span class="en">Aligned with the Paris Agreement, UN SDGs, and Oman Vision 2040 — sustainability is at the core of everything we do.</span><span class="ar">متوافقون مع اتفاقية باريس وأهداف الأمم المتحدة للتنمية المستدامة ورؤية عُمان 2040 — الاستدامة في صميم كل ما نقوم به.</span></span><span class="ar">متوافقون مع اتفاقية باريس وأهداف الأمم المتحدة للتنمية المستدامة ورؤية عُمان 2040 — الاستدامة في صميم كل ما نقوم به.</span></p>
       <div class="hero__btns">
-        <a href="https://oqbi.om/wp-content/uploads/2025/07/250622-OQBI-2024-ESG-Report-English.pdf" target="_blank" class="btn btn--orange"><span class="en">View 2024 <span class="en">ESG Report</span><span class="ar">تقرير الحوكمة البيئية والاجتماعية</span></span><span class="ar">عرض تقرير الحوكمة البيئية لعام 2024</span></a>
+        <a href="https://oqbi.om/wp-content/uploads/2025/07/250622-OQBI-2024-ESG-Report-English.pdf" target="_blank" class="btn btn--orange">View 2024 ESG Report</a>
       </div>
     </div>
   </section>
@@ -1441,8 +1344,8 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">Our philosophy</span><span class="ar">فلسفتنا</span></p>
-          <h2 class="section-heading"><span class="en">Building a resilient and sustainable future for OQBI</span><span class="ar">نصنع مستقبلاً مرنًا ومستدامًا لأوكيو والوطن</span></h2>
+          <p class="section-label">Our philosophy</p>
+          <h2 class="section-heading"><span class="en">Building a resilient and sustainable future for OQBI</span><span class="ar">نبني مستقبلاً مستدامًا ومرنًا لأوكيو</span></h2>
           <p class="section-sub" style="margin-bottom:16px">At OQBI, sustainability is at the core of our business strategy and operations. We believe that a sustainable future is built on the principles of responsible environmental stewardship, social equity, and economic prosperity.</p>
           <p class="section-sub" style="margin-bottom:16px">By integrating sustainability into our core operations, OQBI aims to drive the creation of a prosperous, equitable, and sustainable future for Oman.</p>
           <p class="section-sub"><span class="en">Sustainable growth at OQBI goes beyond profits; it's about creating long-term value for employees, customers, and stakeholders.</span><span class="ar">النمو المستدام في أوكيو يتخطى الأرباح؛ إنه عن خلق قيمة طويلة الأمد للموظفين والعملاء وأصحاب المصلحة.</span></p>
@@ -1451,7 +1354,7 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div style="background:var(--near-black);border-radius:var(--r-card);overflow:hidden">
             <div class="img-ph" style="height:260px">SUSTAINABILITY IMAGE</div>
             <div style="padding:24px 28px">
-              <div style="font-size:clamp(14px,1.5vw,18px);font-weight:700;color:var(--white);margin-bottom:8px"><span class="en">Sustainability Mandate</span><span class="ar">ميثاق الاستدامة</span></div>
+              <div style="font-size:clamp(14px,1.5vw,18px);font-weight:700;color:var(--white);margin-bottom:8px">Sustainability Mandate</div>
               <p style="font-size:13px;color:rgba(255,255,255,.68);line-height:1.65;font-weight:300">As part of the larger OQ group, OQBI is actively committed to sustainability across its operations, aligning with global initiatives such as the Paris Agreement and the United Nations Sustainable Development Goals (UN SDGs).</p>
             </div>
           </div>
@@ -1463,44 +1366,44 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Governance -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Governance</span><span class="ar">الحوكمة</span></p>
+      <p class="section-label reveal">Governance</p>
       <h2 class="section-heading reveal"><span class="en">Transparent and effective governance</span><span class="ar">حوكمة شفافة وفعّالة</span></h2>
       <p class="section-sub reveal" style="margin-bottom:28px">At OQBi, we prioritise transparent and effective governance, with the aim of fostering trust and accountability. Our governance framework ensures compliance with regulatory standards, promotes ethical practices, and supports sustainable growth.</p>
       <div class="gov-grid">
         <div class="gov-card reveal d1">
           <div class="gov-card__icon">🏛️</div>
-          <div class="gov-card__title"><span class="en">Board Structure</span><span class="ar">هيكل مجلس الإدارة</span></div>
+          <div class="gov-card__title">Board Structure</div>
           <div class="gov-card__text">Comprising diverse experts who guide strategic direction and oversight.</div>
         </div>
         <div class="gov-card reveal d2">
           <div class="gov-card__icon">⚖️</div>
-          <div class="gov-card__title"><span class="en">Ethical Standards</span><span class="ar">المعايير الأخلاقية</span></div>
+          <div class="gov-card__title">Ethical Standards</div>
           <div class="gov-card__text">Commitment to integrity and ethical behaviour across all operations.</div>
         </div>
         <div class="gov-card reveal d3">
           <div class="gov-card__icon">🤝</div>
-          <div class="gov-card__title"><span class="en">Stakeholder Engagement</span><span class="ar">إشراك أصحاب المصلحة</span></div>
+          <div class="gov-card__title">Stakeholder Engagement</div>
           <div class="gov-card__text">Regular communication with stakeholders to understand their needs and enhance decision-making.</div>
         </div>
         <div class="gov-card reveal d4">
           <div class="gov-card__icon">🌱</div>
-          <div class="gov-card__title"><span class="en">Sustainability Initiatives</span><span class="ar">مبادرات الاستدامة</span></div>
+          <div class="gov-card__title">Sustainability Initiatives</div>
           <div class="gov-card__text">Integration of sustainable practices into our governance processes to promote long-term value creation.</div>
         </div>
         <div class="gov-card reveal d2">
           <div class="gov-card__icon">🛡️</div>
-          <div class="gov-card__title"><span class="en">Risk Management</span><span class="ar">إدارة المخاطر</span></div>
+          <div class="gov-card__title">Risk Management</div>
           <div class="gov-card__text">Proactive identification and mitigation of risks to safeguard our interests and those of our stakeholders.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <span class="en">Social Investment</span><span class="ar">الاستثمار الاجتماعي</span> Sidebar Content -->
+  <!-- Social Investment Sidebar Content -->
   <section class="section">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Social Investment</span><span class="ar">الاستثمار الاجتماعي</span></p>
-      <h2 class="section-heading reveal"><span class="en">Our Sustainability Highlights</span><span class="ar">أبرز مبادراتنا في الاستدامة</span></h2>
+      <p class="section-label reveal">Social Investment</p>
+      <h2 class="section-heading reveal"><span class="en">Our Sustainability Highlights</span><span class="ar">أبرز إنجازاتنا في الاستدامة</span></h2>
       <p class="section-sub reveal" style="margin-bottom:0">At the heart of our mission as a responsible corporate leader is a relentless commitment to driving socio-economic progress.</p>
       <div class="sus-layout">
         <div class="sus-sidebar reveal">
@@ -1509,36 +1412,36 @@ textarea.form-input{resize:vertical;min-height:110px}
           <div class="sus-sidebar__item" onclick="switchSus(this,'youth')"><span class="en">Youth and Citizenship</span><span class="ar">الشباب والمواطنة</span></div>
           <div class="sus-sidebar__item" onclick="switchSus(this,'comm')"><span class="en">Community Development</span><span class="ar">تنمية المجتمع</span></div>
           <div class="sus-sidebar__item" onclick="switchSus(this,'env')"><span class="en">Environment</span><span class="ar">البيئة</span></div>
-          <div class="sus-sidebar__item" onclick="switchSus(this,'esg')"><span class="en">ESG Report</span><span class="ar">تقرير الحوكمة البيئية والاجتماعية</span></div>
+          <div class="sus-sidebar__item" onclick="switchSus(this,'esg')"><span class="en">ESG Report</span><span class="ar">تقرير الحوكمة</span></div>
         </div>
         <div class="sus-panel reveal-right" id="susPanel">
           <div class="img-ph sus-panel__img">INITIATIVE IMAGE</div>
           <div class="sus-panel__body">
-            <div class="sus-panel__title" id="susPanelTitle"><span class="en">Education and Health — Empowering Minds and Ensuring Wellbeing</span><span class="ar">التعليم والصحة — تمكين العقول وضمان الرفاه</span></div>
-            <div class="sus-panel__text" id="susPanelText">We believe that education and health are fundamental pillars of sustainable development. Our commitment is reflected in targeted initiatives that enhance the quality of education and healthcare in the communities where we operate.<br><br><strong><span class="en">Salalah Autism Centre</span><span class="ar">مركز صلالة للتوحد</span></strong> — Aligned with our commitment to building an inclusive society, OQBi funded the establishment of Salalah Autism Center, the first center in Dhofar to provide quality care for persons with autism spectrum disorder. Located in Salalah with a capacity of 80, total donation: OMR 990,000.</div>
+            <div class="sus-panel__title" id="susPanelTitle">Education and Health — Empowering Minds and Ensuring Wellbeing</div>
+            <div class="sus-panel__text" id="susPanelText">We believe that education and health are fundamental pillars of sustainable development. Our commitment is reflected in targeted initiatives that enhance the quality of education and healthcare in the communities where we operate.<br><br><strong>Salalah Autism Centre</strong> — Aligned with our commitment to building an inclusive society, OQBi funded the establishment of Salalah Autism Center, the first center in Dhofar to provide quality care for persons with autism spectrum disorder. Located in Salalah with a capacity of 80, total donation: OMR 990,000.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <span class="en">ESG Report</span><span class="ar">تقرير الحوكمة البيئية والاجتماعية</span> + Sponsorship -->
+  <!-- ESG Report + Sponsorship -->
   <section class="section bg-light">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
         <div class="banner-card reveal-left" style="margin-bottom:0;min-height:clamp(180px,22vw,260px)">
           <div class="banner-card__bg img-ph"></div>
           <div class="banner-card__content">
-            <div class="banner-card__title" style="font-size:clamp(18px,2.5vw,36px)"><span class="en"><span class="en">ESG Report</span><span class="ar">تقرير الحوكمة البيئية والاجتماعية</span> 2024</span><span class="ar">تقرير الحوكمة البيئية والاجتماعية 2024</span></div>
+            <div class="banner-card__title" style="font-size:clamp(18px,2.5vw,36px)">ESG Report 2024</div>
             <a href="https://oqbi.om/wp-content/uploads/2025/07/250622-OQBI-2024-ESG-Report-English.pdf" target="_blank" class="btn btn--orange"><span class="en">Download Report</span><span class="ar">تحميل التقرير</span></a>
           </div>
         </div>
         <div class="banner-card reveal-right" style="margin-bottom:0;min-height:clamp(180px,22vw,260px)">
           <div class="banner-card__bg img-ph"></div>
           <div class="banner-card__content">
-            <div class="banner-card__title" style="font-size:clamp(18px,2.5vw,36px)"><span class="en">Sponsorship Request</span><span class="ar">طلب رعاية</span></div>
-            <div class="banner-card__sub" style="font-size:13px"><span class="en">Support community programs in line with our social investment pillars.</span><span class="ar">ادعم برامج المجتمع وفق ركائز الاستثمار الاجتماعي لدينا.</span></div>
-            <button class="btn btn--orange" onclick="showPage('tawreed')"><span class="en">Submit a Request</span><span class="ar">تقديم طلب</span></button>
+            <div class="banner-card__title" style="font-size:clamp(18px,2.5vw,36px)">Sponsorship Request</div>
+            <div class="banner-card__sub" style="font-size:13px">Support community programs in line with our social investment pillars.</div>
+            <button class="btn btn--orange" onclick="showPage('tawreed')">Submit a Request</button>
           </div>
         </div>
       </div>
@@ -1551,39 +1454,39 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
         <div class="dark-section reveal-left">
           <p class="section-label">Contact Us</p>
-          <h2 class="section-heading"><span class="en">Get Involved</span><span class="ar">شارك معنا</span></h2>
+          <h2 class="section-heading"><span class="en">Get Involved</span><span class="ar">كن جزءًا من التغيير</span></h2>
           <p class="section-sub" style="margin-bottom:24px">If you would like to learn more about our social programs or get involved, we'd love to hear from you.</p>
           <div class="contact-info-row">
             <div class="contact-info-item">
               <div class="contact-info-item__icon">📍</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Address</span><span class="ar">العنوان</span></div>
+                <div class="contact-info-item__label">Address</div>
                 <div class="contact-info-item__value" style="color:rgba(255,255,255,.82)"><span class="en">P.O. Box 316, P.C. 217, Al Awqadain, Salalah</span><span class="ar">ص.ب 316، الرمز البريدي 217، العوقدين، صلالة</span>, Sultanate of Oman</div>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-item__icon">✉️</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></div>
+                <div class="contact-info-item__label">Email</div>
                 <div class="contact-info-item__value" style="color:rgba(255,255,255,.82)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="493a3c3a3d282027282b2025203d300926382b20672624">[email&#160;protected]</a></div>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-item__icon">📞</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Phone</span><span class="ar">الهاتف</span></div>
+                <div class="contact-info-item__label">Phone</div>
                 <div class="contact-info-item__value" style="color:rgba(255,255,255,.82)">+968 2321 8800</div>
               </div>
             </div>
           </div>
         </div>
         <div class="form-card reveal-right">
-          <div class="form-card__title"><span class="en">Send us a Message</span><span class="ar">أرسل لنا رسالة</span></div>
-          <div class="form-group"><label class="form-label"><span class="en">Your Name</span><span class="ar">اسمك</span></label><input class="form-input" type="text" placeholder="Full name"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Email Address</span><span class="ar">بريدك الإلكتروني</span></label><input class="form-input" type="email" placeholder="your@email.com"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Subject</span><span class="ar">الموضوع</span></label><input class="form-input" type="text" placeholder="How can we help?"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Message</span><span class="ar">رسالتك</span></label><textarea class="form-input" placeholder="Your message..."></textarea></div>
-          <button class="btn btn--orange" style="width:100%;justify-content:center"><span class="en">Send Message</span><span class="ar">إرسال الرسالة</span></button>
+          <div class="form-card__title">Send us a Message</div>
+          <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="Full name"/></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="your@email.com"/></div>
+          <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" placeholder="How can we help?"/></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" placeholder="Your message..."></textarea></div>
+          <button class="btn btn--orange" style="width:100%;justify-content:center">Send Message</button>
         </div>
       </div>
     </div>
@@ -1597,11 +1500,11 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__bg img-ph" style="height:100%;position:absolute;inset:0;opacity:.45">INVESTORS HERO</div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow"><span class="en">Investor Relations</span><span class="ar">علاقات المُستثمرين</span></p>
-      <h1 class="hero__title"><span class="en"><span class="en">OQBI: Driving sustainable growth</span><span class="ar">أوكيو للصناعات الأساسية: نُحقق النمو المُستدام</span><br><em><span class="en">and global impact.</span><span class="ar">والأثر العالمي.</span></em></span><span class="ar">أوكيو للصناعات الأساسية: نُحقق النمو المستدام<br><em>والأثر العالمي.</em></span></h1>
-      <p class="hero__subtitle"><span class="en"><span class="en">OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> — strategically located in Oman's Salalah Free Zone, committed to sustainability and operational excellence.</span><span class="ar">أوكيو للصناعات الأساسية — موقع استراتيجي في المنطقة الحرة بصلالة، ملتزمة بالاستدامة والتميز التشغيلي.</span></span><span class="ar">أوكيو للصناعات الأساسية — موقع استراتيجي في المنطقة الحرة بصلالة، ملتزمة بالاستدامة والتميز التشغيلي.</span></p>
+      <p class="hero__eyebrow"><span class="en">Investor Relations</span><span class="ar">علاقات المستثمرين</span></p>
+      <h1 class="hero__title"><span class="en">OQBI: Driving sustainable growth<br><em>and global impact.</em></span><span class="ar">أوكيو للصناعات الأساسية: نُحقق النمو المستدام<br><em>والأثر العالمي.</em></span></h1>
+      <p class="hero__subtitle"><span class="en"><span class="en">OQ Base Industries — strategically located in Oman's Salalah Free Zone, committed to sustainability and operational excellence.</span><span class="ar">أوكيو للصناعات الأساسية — موقع استراتيجي في المنطقة الحرة بصلالة، ملتزمة بالاستدامة والتميز التشغيلي.</span></span><span class="ar">أوكيو للصناعات الأساسية — موقع استراتيجي في المنطقة الحرة بصلالة، ملتزمة بالاستدامة والتميز التشغيلي.</span></p>
       <div class="hero__btns">
-        <button class="btn btn--orange" onclick="document.getElementById('fin-reports').scrollIntoView({behavior:'smooth'})"><span class="en">Explore Financial Reports</span><span class="ar">تصفح التقارير المالية</span></button>
+        <button class="btn btn--orange" onclick="document.getElementById('fin-reports').scrollIntoView({behavior:'smooth'})">Explore Financial Reports</button>
       </div>
     </div>
   </section>
@@ -1609,48 +1512,48 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Why Invest -->
   <section class="section">
     <div class="container">
-      <p class="section-label reveal"><span class="en">OQBI for Investors</span><span class="ar">أوكيو للصناعات الأساسية للمستثمرين</span></p>
-      <h2 class="section-heading reveal"><span class="en"><span class="en">Why OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span></span><span class="ar">مميزات أوكيو للصناعات الأساسية</span></span><span class="ar">لماذا أوكيو للصناعات الأساسية</span></h2>
-      <p class="section-sub reveal" style="margin-bottom:28px">OQ <span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span> (OQBI) is a leading regional chemical producer, specialising in the production of LPG products, methanol and ammonia, driving global industry growth and contributing to Oman's economic and social development, in alignment with Oman Vision 2040.</p>
+      <p class="section-label reveal">OQBI for Investors</p>
+      <h2 class="section-heading reveal"><span class="en">Why OQ Base Industries</span><span class="ar">لماذا أوكيو للصناعات الأساسية</span></h2>
+      <p class="section-sub reveal" style="margin-bottom:28px">OQ Base Industries (OQBI) is a leading regional chemical producer, specialising in the production of LPG products, methanol and ammonia, driving global industry growth and contributing to Oman's economic and social development, in alignment with Oman Vision 2040.</p>
       <div class="investor-reasons">
         <div class="reason-card reveal d1">
           <div class="reason-card__icon">🇴🇲</div>
-          <div class="reason-card__title"><span class="en">Attraction of Oman</span><span class="ar">جاذبية سلطنة عُمان</span></div>
+          <div class="reason-card__title">Attraction of Oman</div>
           <div class="reason-card__text">Strategic investment jurisdiction and strategic location within the Salalah Free Zone.</div>
         </div>
         <div class="reason-card reveal d2">
           <div class="reason-card__icon">🏭</div>
-          <div class="reason-card__title"><span class="en">Robust Industry Environment</span><span class="ar">بيئة صناعية قوية</span></div>
+          <div class="reason-card__title">Robust Industry Environment</div>
           <div class="reason-card__text">Strong demand growth for methanol, ammonia, and LPG products across a broad range of end markets.</div>
         </div>
         <div class="reason-card reveal d3">
           <div class="reason-card__icon">📊</div>
-          <div class="reason-card__title"><span class="en">Strong Operational Track Record</span><span class="ar">سجل تشغيلي حافل بالإنجازات</span></div>
+          <div class="reason-card__title">Strong Operational Track Record</div>
           <div class="reason-card__text">Fully integrated, state-of-the-art assets with high reliability and operational excellence.</div>
         </div>
         <div class="reason-card reveal d4">
           <div class="reason-card__icon">⛽</div>
-          <div class="reason-card__title"><span class="en">Long-term Gas Supply</span><span class="ar">إمدادات غاز طويلة الأمد</span></div>
+          <div class="reason-card__title">Long-term Gas Supply</div>
           <div class="reason-card__text">Long-term gas supply agreements with attractive pricing mechanism ensuring stable feedstock.</div>
         </div>
         <div class="reason-card reveal d1">
           <div class="reason-card__icon">🌍</div>
-          <div class="reason-card__title"><span class="en">Attractive Geographic Location</span><span class="ar">موقع جغرافي مميز</span></div>
+          <div class="reason-card__title">Attractive Geographic Location</div>
           <div class="reason-card__text">Access to global logistics network, scale and expertise of the OQ Trading platform.</div>
         </div>
         <div class="reason-card reveal d2">
           <div class="reason-card__icon">🚀</div>
-          <div class="reason-card__title"><span class="en">Tangible Future Growth</span><span class="ar">مسارات نمو مستقبلية ملموسة</span></div>
+          <div class="reason-card__title">Tangible Future Growth</div>
           <div class="reason-card__text">Brownfield expansion project to increase methanol plant capacity by 50%.</div>
         </div>
         <div class="reason-card reveal d3">
           <div class="reason-card__icon">♻️</div>
-          <div class="reason-card__title"><span class="en">Positioned for Clean Transition</span><span class="ar">مؤهلون لقيادة التحول النظيف</span></div>
+          <div class="reason-card__title">Positioned for Clean Transition</div>
           <div class="reason-card__text">Optimally positioned to capitalise on the transition to clean methanol and ammonia.</div>
         </div>
         <div class="reason-card reveal d4">
           <div class="reason-card__icon">💰</div>
-          <div class="reason-card__title"><span class="en">Attractive Dividend Capacity</span><span class="ar">قدرة توزيع أرباح جذابة</span></div>
+          <div class="reason-card__title">Attractive Dividend Capacity</div>
           <div class="reason-card__text">High margins and strong cashflow generation across commodity cycles.</div>
         </div>
       </div>
@@ -1660,14 +1563,14 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Market Drivers -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Global Demand</span><span class="ar">حجم الطلب العالمي</span></p>
+      <p class="section-label reveal">Global Demand</p>
       <h2 class="section-heading reveal"><span class="en">Methanol, ammonia and LPG form a vital component of an integrated value chain</span><span class="ar">الميثانول والأمونيا والغاز البترولي المُسال عناصر محورية في سلسلة قيمة متكاملة</span></h2>
       <p class="section-sub reveal" style="margin-bottom:28px">Outlook supported by growing demand, expanding MENA exports, and strong market fundamentals.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
         <div style="background:var(--white);border-radius:var(--r-card);box-shadow:var(--shadow);padding:clamp(20px,2.8vw,36px)" class="reveal d1">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
             <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⚗️</div>
-            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)"><span class="en">Key Drivers: Methanol</span><span class="ar">المحركات الرئيسية: الميثانول</span></div>
+            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)">Key Drivers: Methanol</div>
           </div>
           <ul style="display:flex;flex-direction:column;gap:8px">
             <li style="font-size:13px;color:#555;line-height:1.6;padding-left:12px;border-left:2px solid var(--teal)">Continued absolute growth into MTO / MTP despite slowdown vs. historical period</li>
@@ -1678,7 +1581,7 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div style="background:var(--white);border-radius:var(--r-card);box-shadow:var(--shadow);padding:clamp(20px,2.8vw,36px)" class="reveal d2">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
             <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌾</div>
-            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)"><span class="en">Key Drivers: Ammonia</span><span class="ar">المحركات الرئيسية: الأمونيا</span></div>
+            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)">Key Drivers: Ammonia</div>
           </div>
           <ul style="display:flex;flex-direction:column;gap:8px">
             <li style="font-size:13px;color:#555;line-height:1.6;padding-left:12px;border-left:2px solid var(--orange)">Steady demand driven by nitrogen fertiliser consumption, supported by income and population growth</li>
@@ -1689,7 +1592,7 @@ textarea.form-input{resize:vertical;min-height:110px}
         <div style="background:var(--white);border-radius:var(--r-card);box-shadow:var(--shadow);padding:clamp(20px,2.8vw,36px)" class="reveal d3">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
             <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔥</div>
-            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)"><span class="en">Key Drivers: LPG</span><span class="ar">المحركات الرئيسية: الغاز البترولي المُسال</span></div>
+            <div style="font-size:clamp(15px,1.6vw,18px);font-weight:700;color:var(--dark)">Key Drivers: LPG</div>
           </div>
           <ul style="display:flex;flex-direction:column;gap:8px">
             <li style="font-size:13px;color:#555;line-height:1.6;padding-left:12px;border-left:2px solid var(--teal)">LPG products are by-products of natural gas and crude oil production, making supply inelastic</li>
@@ -1704,8 +1607,8 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Disclosures -->
   <section class="section" style="background:var(--near-black)" id="fin-reports">
     <div class="container">
-      <p class="section-label reveal" style="color:var(--teal)"><span class="en">Disclosures & Filings</span><span class="ar">الإفصاحات والإيداعات</span></p>
-      <h2 class="section-heading reveal" style="color:var(--white);margin-bottom:28px"><span class="en">Official Disclosures</span><span class="ar">الإفصاحات الرسمية</span></h2>
+      <p class="section-label reveal" style="color:var(--teal)">Disclosures & Filings</p>
+      <h2 class="section-heading reveal" style="color:var(--white);margin-bottom:28px"><span class="en"><span class="en">Official Disclosures</span><span class="ar">الإفصاحات الرسمية</span></span><span class="ar">الإفصاحات الرسمية</span></h2>
       <div class="disclosures-list reveal">
         <div class="disclosure-row"><span class="disclosure-name">Disclosure of Appointment of Investor Relation Manager</span><a href="https://oqbi.om/wp-content/uploads/2025/03/Disclosure-of-Appointement-of-Investor-Relation-Manager.pdf" target="_blank" class="disclosure-dl">↓</a></div>
         <div class="disclosure-row"><span class="disclosure-name">Disclosure of Board Resolutions</span><a href="https://oqbi.om/wp-content/uploads/2025/03/Disclosure-of-Board-Resolutions.pdf" target="_blank" class="disclosure-dl">↓</a></div>
@@ -1723,49 +1626,49 @@ textarea.form-input{resize:vertical;min-height:110px}
   <!-- Quick Links & Reports -->
   <section class="section bg-light">
     <div class="container">
-      <p class="section-label reveal"><span class="en">Quick Links & Financial Reports</span><span class="ar">روابط سريعة والتقارير المالية</span></p>
-      <h2 class="section-heading reveal" style="margin-bottom:28px"><span class="en">Key Documents</span><span class="ar">الوثائق الرئيسية</span></h2>
+      <p class="section-label reveal">Quick Links & Financial Reports</p>
+      <h2 class="section-heading reveal" style="margin-bottom:28px"><span class="en"><span class="en">Key Documents</span><span class="ar">الوثائق الرئيسية</span></span><span class="ar">الوثائق الرئيسية</span></h2>
       <div class="reports-grid">
         <div class="report-doc reveal d1">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">OQBI Annual Report 2024</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/03/Final-Version-of-OQBI-Annual-Report-2024-2.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/03/Final-Version-of-OQBI-Annual-Report-2024-2.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
         <div class="report-doc reveal d2">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">OQBI Performance – Q1 2025 Roadshow</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/05/ROADSHOW_14_05_2025.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/05/ROADSHOW_14_05_2025.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
         <div class="report-doc reveal d3">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">OQBI FS Summary – 30 June 2025</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/09/oqbi_fs_summary_30062025_english.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/09/oqbi_fs_summary_30062025_english.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
         <div class="report-doc reveal d4">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">Consolidated FS – 30 September 2024</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/01/OQ-BI-consolidated-interim-condensed-FS-30-September-2024-English.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/01/OQ-BI-consolidated-interim-condensed-FS-30-September-2024-English.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
         <div class="report-doc reveal d1">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">Disclosure – US Announcement on Customs Tariffs</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/04/The-Disclosure-of-repercussion-of-The-United-States-Announcement-of-Additional-Customs-Tariffs.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/04/The-Disclosure-of-repercussion-of-The-United-States-Announcement-of-Additional-Customs-Tariffs.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
         <div class="report-doc reveal d2">
           <div class="report-doc__bar"></div>
           <div class="report-doc__body">
             <div class="report-doc__title">Appointment of Ubhar Capital as Liquidity Provider</div>
-            <a href="https://oqbi.om/wp-content/uploads/2025/04/Appointment-of-Ubhar-Capital-as-a-Liquidity-Provider.pdf" target="_blank" class="report-doc__link"><span class="en">↓ Download PDF</span><span class="ar">↓ تحميل PDF</span></a>
+            <a href="https://oqbi.om/wp-content/uploads/2025/04/Appointment-of-Ubhar-Capital-as-a-Liquidity-Provider.pdf" target="_blank" class="report-doc__link">↓ Download PDF</a>
           </div>
         </div>
       </div>
@@ -1777,14 +1680,14 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
         <div class="dark-section reveal-left">
-          <h3 style="font-size:clamp(16px,2vw,24px);font-weight:700;color:var(--white);margin-bottom:12px"><span class="en">Building a sustainable future together</span><span class="ar">نبني مستقبلاً مستدامًا معاً</span></h3>
+          <h3 style="font-size:clamp(16px,2vw,24px);font-weight:700;color:var(--white);margin-bottom:12px">Building a sustainable future together</h3>
           <p style="font-size:clamp(13px,1.3vw,16px);color:rgba(255,255,255,.68);line-height:1.68;font-weight:300;margin-bottom:20px">Our initiatives focus on reducing carbon emissions, enhancing community welfare, and driving socio-economic development in line with global sustainability goals.</p>
-          <button class="btn btn--orange" onclick="showPage('sustainability')"><span class="en">Explore Our Initiatives</span><span class="ar">تصفح مبادراتنا</span></button>
+          <button class="btn btn--orange" onclick="showPage('sustainability')">Explore Our Initiatives</button>
         </div>
         <div class="dark-section reveal-right">
-          <h3 style="font-size:clamp(16px,2vw,24px);font-weight:700;color:var(--white);margin-bottom:12px"><span class="en">Meet our leadership team</span><span class="ar">تعرف على فريق القيادة</span></h3>
+          <h3 style="font-size:clamp(16px,2vw,24px);font-weight:700;color:var(--white);margin-bottom:12px">Meet our leadership team</h3>
           <p style="font-size:clamp(13px,1.3vw,16px);color:rgba(255,255,255,.68);line-height:1.68;font-weight:300;margin-bottom:20px">Our leadership team drives innovation and strategic growth, ensuring we remain at the forefront of our industry.</p>
-          <button class="btn btn--orange" onclick="showPage('who')"><span class="en">Meet Our Team</span><span class="ar">تعرف على فريقنا</span></button>
+          <button class="btn btn--orange" onclick="showPage('who')">Meet Our Team</button>
         </div>
       </div>
     </div>
@@ -1799,8 +1702,8 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <p class="hero__eyebrow"><span class="en">News & Media</span><span class="ar">أخبارنا وإعلامنا</span></p>
-      <h1 class="hero__title"><span class="en">The Latest at OQBI</span><span class="ar">آخر أخبار أوكيو</span></h1>
-      <p class="hero__subtitle"><span class="en"><span class="en">Our news and media hub — press releases, company announcements, executive speeches, and campaign content.</span><span class="ar">مركزنا الإعلامي — البيانات الصحفية والإعلانات الهامة ورسائل القيادة التنفيذية ومحتوى الحملات الإعلانية.</span></span><span class="ar">مركز الأخبار والإعلام — بيانات صحفية وإعلانات الشركة وخطابات قيادية ومحتوى الحملات.</span></p>
+      <h1 class="hero__title"><span class="en">The Latest at OQBI</span><span class="ar">آخر أخبار أوكيو للصناعات الأساسية</span></h1>
+      <p class="hero__subtitle"><span class="en"><span class="en">Our news and media hub — press releases, company announcements, executive speeches, and campaign content.</span><span class="ar">مركزنا الإعلامي لأحدث مستجدات أوكيو للصناعات الأساسية — بيانات صحفية وإعلانات الشركة ورسائل القيادة التنفيذية ومحتوى الحملات.</span></span><span class="ar">مركز الأخبار والإعلام — بيانات صحفية وإعلانات الشركة وخطابات قيادية ومحتوى الحملات.</span></p>
     </div>
   </section>
 
@@ -1811,12 +1714,12 @@ textarea.form-input{resize:vertical;min-height:110px}
         <button class="filter-btn" onclick="filterNews('People',this)"><span class="en">People</span><span class="ar">الموارد البشرية</span></button>
         <button class="filter-btn" onclick="filterNews('Industry',this)"><span class="en">Industry</span><span class="ar">الصناعة</span></button>
         <button class="filter-btn" onclick="filterNews('Safety',this)"><span class="en">Safety</span><span class="ar">السلامة</span></button>
-        <button class="filter-btn" onclick="filterNews('Community',this)"><span class="en">Community</span><span class="ar">المجتمع</span></button>
-        <button class="filter-btn" onclick="filterNews('Investor Relations',this)"><span class="en">Investor Relations</span><span class="ar">علاقات المُستثمرين</span></button>
+        <button class="filter-btn" onclick="filterNews('Community',this)"><span class="en">Community</span><span class="ar">مجتمع</span></button>
+        <button class="filter-btn" onclick="filterNews('Investor Relations',this)"><span class="en">Investor Relations</span><span class="ar">علاقات المستثمرين</span></button>
       </div>
       <div class="news-masonry" id="newsMasonry"><!-- JS rendered --></div>
       <div id="newsNoResults" style="display:none;text-align:center;padding:60px 0;color:#999;font-size:18px">
-        <span class="en"><span class="en">No articles in this category yet.</span><span class="ar">لا توجد مقالات في هذا التصنيف بعد.</span></span>
+        <span class="en">No articles in this category yet.</span>
         <span class="ar">لا توجد مقالات في هذا التصنيف بعد.</span>
       </div>
     </div>
@@ -1831,9 +1734,9 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="hero__content">
       <p class="hero__eyebrow"><span class="en">Partner with Us</span><span class="ar">كن شريك نجاحنا</span></p>
       <h1 class="hero__title"><span class="en">OQ Tawreed Portal</span><span class="ar">منصة توريد أوكيو</span></h1>
-      <p class="hero__subtitle"><span class="en">A comprehensive suite of collaborative, web-based tools designed to streamline OQBI's procurement process.</span><span class="ar">منصة رقمية متكاملة توفر أدوات تعاونية لتبسيط عمليات المشتريات في أوكيو للصناعات الأساسية وتوفير الوقت والجهد.</span></p>
+      <p class="hero__subtitle"><span class="en"><span class="en">A comprehensive suite of collaborative, web-based tools designed to streamline OQBI's procurement process.</span><span class="ar">منصة رقمية متكاملة توفر أدوات تعاونية لتبسيط عمليات المشتريات في أوكيو للصناعات الأساسية وتوفير الوقت والجهد.</span></span><span class="ar">منصة رقمية متكاملة تُوفر أدوات تعاونية لتبسيط وتيسير عمليات المشتريات في أوكيو للصناعات الأساسية.</span></p>
       <div class="hero__btns">
-        <a href="https://tawreed.oq.com/esop/oma-host/public/oq/web/login.jst" target="_blank" class="btn btn--orange"><span class="en">Access the Portal</span><span class="ar">الدخول للمنصة</span></a>
+        <a href="https://tawreed.oq.com/esop/oma-host/public/oq/web/login.jst" target="_blank" class="btn btn--orange"><span class="en"><span class="en">Access the Portal</span><span class="ar">الدخول للمنصة</span></span><span class="ar">الدخول للمنصة</span></a>
       </div>
     </div>
   </section>
@@ -1842,42 +1745,42 @@ textarea.form-input{resize:vertical;min-height:110px}
     <div class="container">
       <div class="tawreed-hero-content">
         <div class="reveal-left">
-          <p class="section-label"><span class="en">About Tawreed</span><span class="ar">حول منصة توريد</span></p>
-          <h2 class="section-heading"><span class="en">Streamlining procurement for efficiency</span><span class="ar">تبسيط عمليات المشتريات لتحقيق الكفاءة</span></h2>
+          <p class="section-label">About Tawreed</p>
+          <h2 class="section-heading"><span class="en">Streamlining procurement for efficiency</span><span class="ar">تبسيط المشتريات لتحقيق الكفاءة</span></h2>
           <p class="section-sub" style="margin-bottom:24px">The OQ Tawreed Portal offers a comprehensive suite of collaborative, web-based tools designed to streamline OQBI's procurement process. This secure and efficient platform enables our procurement professionals and suppliers to manage sourcing activities with ease, reducing time and effort for both parties.</p>
           <div class="contact-info-row">
             <div class="contact-info-item">
               <div class="contact-info-item__icon">📍</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Address</span><span class="ar">العنوان</span></div>
+                <div class="contact-info-item__label">Address</div>
                 <div class="contact-info-item__value">P.O. Box 316, P.C. 217, Al Awqadain, Salalah, Sultanate of Oman<br>Salalah Free Zone, WXPR+P49, Raysut</div>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-item__icon">✉️</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></div>
+                <div class="contact-info-item__label">Email</div>
                 <div class="contact-info-item__value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0675737572676f6867646f6a6f727f466977646f28696b">[email&#160;protected]</a></div>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-item__icon">📞</div>
               <div>
-                <div class="contact-info-item__label"><span class="en">Phone</span><span class="ar">الهاتف</span></div>
+                <div class="contact-info-item__label">Phone</div>
                 <div class="contact-info-item__value">+968 2321 8800</div>
               </div>
             </div>
           </div>
-          <a href="https://tawreed.oq.com/esop/oma-host/public/oq/web/login.jst" target="_blank" class="btn btn--orange" style="margin-top:8px"><span class="en">Access the Portal →</span><span class="ar">← الدخول للمنصة</span></a>
+          <a href="https://tawreed.oq.com/esop/oma-host/public/oq/web/login.jst" target="_blank" class="btn btn--orange" style="margin-top:8px">Access the Portal →</a>
         </div>
         <div class="form-card reveal-right">
           <div class="form-card__title">Contact Us</div>
           <p style="font-size:13px;color:#666;margin-bottom:20px;line-height:1.6">If you would like to learn more about partnering with OQBI or have a general enquiry, please fill in the form below.</p>
-          <div class="form-group"><label class="form-label"><span class="en">Your Name</span><span class="ar">اسمك</span></label><input class="form-input" type="text" placeholder="Full name"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Email Address</span><span class="ar">بريدك الإلكتروني</span></label><input class="form-input" type="email" placeholder="your@company.com"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Subject</span><span class="ar">الموضوع</span></label><input class="form-input" type="text" placeholder="How can we help?"/></div>
-          <div class="form-group"><label class="form-label"><span class="en">Message</span><span class="ar">رسالتك</span></label><textarea class="form-input" placeholder="Tell us about your procurement needs..."></textarea></div>
-          <button class="btn btn--orange" style="width:100%;justify-content:center"><span class="en">Send Message</span><span class="ar">إرسال الرسالة</span></button>
+          <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="Full name"/></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="your@company.com"/></div>
+          <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" placeholder="How can we help?"/></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" placeholder="Tell us about your procurement needs..."></textarea></div>
+          <button class="btn btn--orange" style="width:100%;justify-content:center">Send Message</button>
         </div>
       </div>
     </div>
@@ -1893,7 +1796,7 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div class="footer__brand">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
           <div class="logo-mark"><span>OQ</span></div>
-          <div class="logo-text" style="color:var(--white)"><span class="en">Base Industries</span><span class="ar">للصناعات الأساسية</span><small style="color:rgba(255,255,255,.5)">Empowering Industries, Enriching Lives</small></div>
+          <div class="logo-text" style="color:var(--white)">Base Industries<small style="color:rgba(255,255,255,.5)">Empowering Industries, Enriching Lives</small></div>
         </div>
         <div class="footer__tagline">Oman's leading integrated producer of methanol, ammonia, and LPG — powering industries and communities worldwide from Salalah Free Zone.</div>
       </div>
@@ -1919,7 +1822,7 @@ textarea.form-input{resize:vertical;min-height:110px}
         <a onclick="showPage('what')">What We Do</a>
         <a onclick="showPage('careers')">Careers</a>
         <a onclick="showPage('sustainability')">Sustainability</a>
-        <a onclick="showPage('investors')"><span class="en">Investor Relations</span><span class="ar">علاقات المُستثمرين</span></a>
+        <a onclick="showPage('investors')">Investor Relations</a>
         <a onclick="showPage('news')">News & Media</a>
         <a onclick="showPage('tawreed')">Tawreed</a>
       </div>
@@ -1934,9 +1837,9 @@ textarea.form-input{resize:vertical;min-height:110px}
       <div style="margin-top:22px">
         <div class="footer__col-title"><span class="en">Contact</span><span class="ar">تواصل معنا</span></div>
         <div class="footer__links">
-          <a href="/cdn-cgi/l/email-protection#1d6e686e697c74737c7f74717469645d726c7f74337270"><span class="__cf_email__" data-cfemail="5320262027323a3d32313a3f3a272a133c22313a7d3c3e">[email&#160;protected]</span></a>
+          <a href="/cdn-cgi/l/email-protection#205355535441494e4142494c495459604f5142490e4f4d"><span class="__cf_email__" data-cfemail="b7c4c2c4c3d6ded9d6d5dedbdec3cef7d8c6d5de99d8da">[email&#160;protected]</span></a>
           <a href="tel:+96823218800">+968 2321 8800</a>
-          <a><span class="en">Salalah Free Zone, Raysut, Oman</span><span class="ar">المنطقة الحرة بصلالة، ريسوت، عُمان</span></a>
+          <a>Salalah Free Zone, Raysut, Oman</a>
         </div>
       </div>
     </div>
@@ -1959,10 +1862,8 @@ function showPage(id){
   pages.forEach(p => {
     const el = document.getElementById('page-'+p);
     const nav = document.getElementById('nav-'+p);
-    const mob = document.getElementById('mob-'+p);
     if(el){ el.classList.toggle('active', p===id) }
     if(nav){ nav.classList.toggle('active', p===id) }
-    if(mob){ mob.classList.toggle('active', p===id) }
   });
   window.scrollTo({top:0,behavior:'instant'});
   // Re-trigger observers
@@ -1992,11 +1893,7 @@ function toggleLang(){
 
 // ---- MOBILE MENU ----
 function toggleMenu(){
-  const menu = document.getElementById('mobileMenu');
-  const burger = document.getElementById('navBurger');
-  const isOpen = menu.classList.toggle('open');
-  burger.classList.toggle('open', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
 
 // ---- NAVBAR SCROLL + BACK TO TOP ----
@@ -2018,11 +1915,84 @@ const observer=new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
 
 // ---- PERSON MODAL ----
-function openModal(section, name, role, bio){
-  document.getElementById('modalSection').textContent = section;
-  document.getElementById('modalName').textContent = name;
-  document.getElementById('modalRole').textContent = role;
-  document.getElementById('modalBio').textContent = bio;
+// ── PEOPLE DATA ──────────────────────────────────────────────────────
+const PEOPLE = {
+  'ali-al-lawati':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Ali Al Lawati`,
+    r:`Chairman of the Board`,rAr:`رئيس مجلس الإدارة`,
+    b:`Ali Al Lawati has over 20 years of experience, currently serving as the Chief People & Technology Officer of OQ. He focuses on portfolio diversification, in-country value creation, attracting investments, and local talent development. In his previous role as the Global HR Director at SLB, Ali oversaw Technology, HR, Legal, HSE, Finance, Strategy and Sustainability functions across Paris, London and Houston. He holds a Bachelor's Degree in Petroleum and Natural Gas Engineering from Sultan Qaboos University.`,
+    bAr:`يتمتع علي اللواتي بخبرة تمتد لأكثر من 20 عامًا، يشغل حاليًا منصب الرئيس التنفيذي للموارد البشرية والتقنية في مجموعة أوكيو. يركز على تنويع المحفظة الاستثمارية وخلق القيمة المحلية من خلال التوطين الصناعي وجذب الاستثمارات وتطوير الكفاءات الوطنية. يحمل درجة البكالوريوس في هندسة النفط والغاز الطبيعي من جامعة السلطان قابوس.`
+  },
+  'saleh-al-mahthuri':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Saleh Al Mahthuri`,
+    r:`Deputy Chairman`,rAr:`نائب رئيس مجلس الإدارة`,
+    b:`Saleh Al Mahthuri brings 20 years of experience in finance, accounting, and auditing. He is currently the General Manager of Internal Audit at the Port of Salalah. Previously, he was the Chief Internal Auditor at Nama Electricity Supply Company and held key positions at OQ Exploration & Production, Daleel Petroleum, and Occidental Petroleum. He holds a Bachelor's in Accounting from Sultan Qaboos University and a Master's in Management Information Technology from Canadian University Dubai. He is also a Certified Internal Auditor.`,
+    bAr:`يمتلك صالح المحذوري خبرة 20 عامًا في مجالات التمويل والمحاسبة والتدقيق. يشغل حاليًا منصب المدير العام للتدقيق الداخلي في ميناء صلالة. عمل سابقًا كبير المدققين الداخليين في شركة نماء لتوزيع الكهرباء وشغل مناصب رئيسية في أوكيو للاستكشاف والإنتاج وداليل للنفط وأوكسيدنتال. يحمل بكالوريوس في المحاسبة من جامعة السلطان قابوس وماجستير في تقنية المعلومات الإدارية من جامعة كندا دبي.`
+  },
+  'ghalib-al-maamari':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Ghalib Al Maamari`,
+    r:`Member`,rAr:`عضو مجلس الإدارة`,
+    b:`Ghalib Al Maamari is the Chief Business Development officer at OQ Alternative Energy, focusing on renewables, low-carbon molecules, and energy efficiency. He has over 19 years of experience in commercial development, financial planning, and project management. Previously, he was VP of Integrated Digital Solutions, leading OQ's digital transformation. He holds a bachelor's in electronic commerce and a master's in business information systems from the University of Queensland, Australia.`,
+    bAr:`غالب المعمري هو رئيس تطوير الأعمال في أوكيو للطاقة البديلة، يركز على الطاقة المتجددة والكربون المنخفض وكفاءة الطاقة. يمتلك أكثر من 19 عامًا من الخبرة في التطوير التجاري والتخطيط المالي وإدارة المشاريع. يحمل بكالوريوس في التجارة الإلكترونية وماجستير في نظم المعلومات الإدارية من جامعة كوينزلاند، أستراليا.`
+  },
+  'pieter-steyn':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Pieter Steyn`,
+    r:`Member`,rAr:`عضو مجلس الإدارة`,
+    b:`Pieter Steyn is the VP Legal for Downstream & Commercial at OQ Group, with over 25 years of experience in oil, gas, petrochemical, and energy sectors. He has contributed to the development and financing of major international projects in the United States, China, and Oman. Previously, he was Commercial Lead at OQ8. Pieter holds a bachelor's degree in law, along with a master's in business leadership from the University of South Africa, and is an admitted Attorney of the High Court of South Africa.`,
+    bAr:`بيتر ستاين هو نائب الرئيس للشؤون القانونية في مجموعة أوكيو، بخبرة تتجاوز 25 عامًا في قطاعات النفط والغاز والبتروكيماويات. ساهم في تطوير وتمويل مشاريع دولية كبرى في الولايات المتحدة والصين وعُمان. يحمل بكالوريوس في القانون وماجستير في قيادة الأعمال من جامعة جنوب أفريقيا.`
+  },
+  'hamed-al-rumhi':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Hamed Al Rumhi`,
+    r:`Member`,rAr:`عضو مجلس الإدارة`,
+    b:`Hamed Al Rumhi holds a Bachelor of Commerce and Economics from Sultan Qaboos University. Since October 2021, he has served as Consulting Services Director at Takatuf Oman, leading consulting strategies and key partnerships. Previously, he was a Managing Consultant at Takatuf Oman and held leadership roles at Shell Development Oman and OQ Exploration & Production, contributing to organisational development and human capital strategies.`,
+    bAr:`يحمل حامد الرمحي بكالوريوس في التجارة والاقتصاد من جامعة السلطان قابوس. يشغل منذ أكتوبر 2021 منصب مدير الخدمات الاستشارية في تكاتف عُمان. شغل سابقًا أدوارًا قيادية في شل للتطوير عُمان وأوكيو للاستكشاف والإنتاج في مجالات التطوير التنظيمي ورأس المال البشري.`
+  },
+  'irfan-mian':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Irfan Mian`,
+    r:`Member`,rAr:`عضو مجلس الإدارة`,
+    b:`Irfan Mian is an investment professional with nearly 25 years of global experience in private equity and portfolio management. He is currently part of the Public Investment Fund's Regional Private Equity team, responsible for deploying $24 billion across six regional economies including Oman. He previously established and led the Mining Unit at Mubadala Investment Company. He holds degrees from the London School of Economics, University of Oxford, and an MBA from IESE Business School.`,
+    bAr:`عرفان ميان متخصص في الاستثمار بخبرة عالمية تقارب 25 عامًا في الأسهم الخاصة وإدارة المحافظ الاستثمارية. يعمل حاليًا ضمن فريق الاستثمارات الإقليمية في صندوق الاستثمارات العامة المسؤول عن توظيف 24 مليار دولار عبر ستة اقتصادات إقليمية من بينها عُمان. يحمل شهادات من كلية لندن للاقتصاد وجامعة أكسفورد وماجستير إدارة الأعمال من مدرسة IESE للأعمال.`
+  },
+  'bader-alhamad':{
+    s:`Board of Directors`,sAr:`مجلس الإدارة`,n:`Bader AlHamad`,
+    r:`Member`,rAr:`عضو مجلس الإدارة`,
+    b:`Bader AlHamad is a Director in the Principal Investment Group at Gulf Investment Corporation (GIC). He previously worked at Dow Chemical Company in Zurich handling commercial and supply chain operations. At GIC, Bader plays a key role in strategic investment decisions and governance, serving on several boards across manufacturing, chemicals, and education sectors in the GCC. He holds a bachelor's degree in chemical engineering from Vanderbilt University.`,
+    bAr:`بدر الحمد مدير في مجموعة الاستثمارات الرئيسية في مؤسسة الخليج للاستثمار (GIC). عمل سابقًا في شركة داو للكيماويات في زيوريخ. يضطلع في GIC بدور محوري في قرارات الاستثمار الاستراتيجية والحوكمة عبر قطاعات التصنيع والكيماويات والتعليم في دول الخليج. يحمل بكالوريوس في الهندسة الكيميائية من جامعة فاندربيلت.`
+  },
+  'khalid-al-asmi':{
+    s:`Executive Team`,sAr:`الفريق التنفيذي`,n:`Khalid Al Asmi`,
+    r:`Chief Executive Officer`,rAr:`الرئيس التنفيذي`,
+    b:`Khalid Al Asmi has over 20 years of extensive experience in the oil and energy industry. Prior to his current position, Khalid held various senior roles at OQ including Vice President of Downstream Technical Services, VP of Downstream Maintenance, and Operations General Manager of the Aromatics Complex for OQ Refineries and Petroleum Industries LLC. He also served as board member of Bharat Oman Refinery Limited and Operations Manager at Sohar Refinery. He holds a BSc and MSc in Chemical Engineering from the University of Nottingham (UK).`,
+    bAr:`يتمتع خالد العسمي بأكثر من 20 عامًا من الخبرة الواسعة في صناعة النفط والطاقة. قبل منصبه الحالي، شغل مناصب قيادية عديدة في أوكيو بما في ذلك نائب الرئيس للخدمات التقنية للتكرير ونائب الرئيس لصيانة التكرير. عمل سابقًا عضوًا في مجلس إدارة مصفاة بهارات عُمان ومديرًا للعمليات في مصفاة صحار. يحمل بكالوريوس وماجستير في الهندسة الكيميائية من جامعة نوتنغهام بالمملكة المتحدة.`
+  },
+  'ahmed-al-baraami':{
+    s:`Executive Team`,sAr:`الفريق التنفيذي`,n:`Ahmed Al Baraami`,
+    r:`Chief Finance Officer`,rAr:`الرئيس المالي`,
+    b:`Ahmed Al Baraami has over 20 years of experience in financial operations, strategic planning and corporate governance in petrochemicals and oil and gas. He served as VP of Finance and Contracts at the Company and General Manager at Safayn Shipping Company. He was also Director of Strategic Planning at Gulf Energy SAOC and held positions at Schlumberger. Ahmed holds an MBA from the University of Houston-Clear Lake (USA) and a BSc in Accounting from the University of Jordan.`,
+    bAr:`يمتلك أحمد البرعمي أكثر من 20 عامًا من الخبرة في العمليات المالية والتخطيط الاستراتيجي وحوكمة الشركات في البتروكيماويات والنفط والغاز. شغل منصب نائب رئيس المالية والعقود في الشركة ومديرًا عامًا في شركة صفاين للشحن. يحمل ماجستير إدارة الأعمال من جامعة هيوستن-كلير ليك (الولايات المتحدة) وبكالوريوس المحاسبة من جامعة الأردن.`
+  },
+  'ihsan-al-jandal':{
+    s:`Executive Team`,sAr:`الفريق التنفيذي`,n:`Ihsan Al Jandal`,
+    r:`Chief Operations Officer`,rAr:`الرئيس التشغيلي`,
+    b:`Ihsan Al Jandal has over 20 years of diverse experience in the petrochemical and energy industries. He served as VP of Operations at OQ and Director of Maintenance and Engineering at the Company. He also worked as a mechanical engineer at Oman India Fertiliser Company SAOC and a field services engineer at GE Oil and Gas. Ihsan holds a BEng in Mechanical Engineering from Loughborough University (UK).`,
+    bAr:`يتمتع إحسان الجندل بأكثر من 20 عامًا من الخبرة المتنوعة في صناعتي البتروكيماويات والطاقة. شغل منصب نائب الرئيس للعمليات في أوكيو ومدير الصيانة والهندسة في الشركة. عمل مهندسًا ميكانيكيًا في شركة عُمان والهند للأسمدة ومهندسًا ميدانيًا في GE للنفط والغاز. يحمل بكالوريوس الهندسة الميكانيكية من جامعة لوفبره بالمملكة المتحدة.`
+  },
+  'ahmed-muqaibal':{
+    s:`Executive Team`,sAr:`الفريق التنفيذي`,n:`Ahmed Muqaibal`,
+    r:`Chief Executive – People, Technology & Communication`,rAr:`الرئيس التنفيذي للموارد البشرية والتقنية والاتصالات`,
+    b:`Ahmed Muqaibal has over 20 years of experience across a diverse background. He held leadership roles including Head of Assurance People and Culture and Director of Support Services at the Company, as well as General Manager of Support Services at Oman Tank Terminal Company LLC. Prior to joining OQ Group, Ahmed worked as Procurement Manager for Ooredoo and Contracts Engineer for PDO and Occidental Petroleum. He holds a Bachelor's in Business Administration and MIS from the University of Arizona (USA) and a CIPS certification.`,
+    bAr:`يمتلك أحمد مقيبل أكثر من 20 عامًا من الخبرة في مجالات متنوعة. شغل أدوارًا قيادية منها رئيس ضمان جودة الموارد البشرية ومدير خدمات الدعم في الشركة ومديرًا عامًا لخدمات الدعم في شركة أوربانك لخزانات النفط. يحمل بكالوريوس إدارة الأعمال ونظم المعلومات الإدارية من جامعة أريزونا (الولايات المتحدة) وشهادة CIPS.`
+  }
+};
+
+function openModal(personId){
+  const isAr = document.documentElement.getAttribute('data-lang')==='ar';
+  const p = PEOPLE[personId];
+  if(!p) return;
+  document.getElementById('modalSection').textContent = isAr ? p.sAr : p.s;
+  document.getElementById('modalName').textContent    = p.n;
+  document.getElementById('modalRole').textContent    = isAr ? p.rAr : p.r;
+  document.getElementById('modalBio').textContent     = isAr ? p.bAr : p.b;
   document.getElementById('personModal').classList.add('open');
   document.body.style.overflow='hidden';
 }
